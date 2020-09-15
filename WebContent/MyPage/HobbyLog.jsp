@@ -67,17 +67,6 @@
          	  	 	<li><a href="../MyPage/EditProfile.jsp" title="회원 정보 관리">회원 정보 관리</li>
         		</ul>
       		</div>
-      		
-      			<div id="my-Sidebar">
-        		<h2>마이페이지</h2>
-        		<ul>
-         		  	<li><a href="../MyPage/Profile.jsp" title="프로필">프로필</a></li>
-        		  	<li><a href="../MyPage/MyClass.jsp" title="내 클래스">내 클래스</li>
-         	  	 	<li><a href="../MyPage/HobbyLog.jsp" title="취미 로그">취미 로그</li>
-         	  	 	<li><a href="../MyPage/EditProfile.jsp" title="회원 정보 관리">회원 정보 관리</li>
-        		</ul>
-      		</div>
-      		
       
 		<!-- Main -->
 				 <section id="main">
