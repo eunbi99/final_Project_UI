@@ -1,17 +1,13 @@
-<!DOCTYPE HTML>
-<!--
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Strongly Typed by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
+<head>
+	<title>MY HOB!</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body class="homepage is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -19,15 +15,15 @@
 					<div class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Strongly Typed</a></h1>
+							<h1 id="logo"><a href="index.jsp">MY HOB!</a></h1>
 							<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
 
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li><a class="icon solid fa-home" href="index.html"><span>Introduction</span></a></li>
+									<li><a class="icon solid fa-home" href="index.jsp"><span>Introduction</span></a></li>
 									<li>
-										<a href="#" class="icon fa-chart-bar"><span>Dropdown</span></a>
+										<a href="#" class="icon fa-chart-bar"><span>Ãë¹Ì</span></a>
 										<ul>
 											<li><a href="#">Lorem ipsum dolor</a></li>
 											<li><a href="#">Magna phasellus</a></li>
@@ -43,33 +39,80 @@
 											<li><a href="#">Veroeros feugiat</a></li>
 										</ul>
 									</li>
-									<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>Left Sidebar</span></a></li>
-									<li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>Right Sidebar</span></a></li>
-									<li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>No Sidebar</span></a></li>
+									<li><a class="icon solid fa-cog" href="../MyPage/MyClass.jsp">
+									<span>MY Page</span></a>
+										<ul>
+											<li><a href="/MyPage/MyClass.jsp">My Class</a></li>
+											<li><a href="/MyPage/HobbyLog.jsp">È°µ¿·Î±×</a></li>
+											<li><a href="/MyPage/Profile.jsp">³» ÇÁ·ÎÇÊ</a></li>
+											<li><a href="/MyPage/EditProfile.jsp">ÇÁ·ÎÇÊ¼öÁ¤</a></li>
+										</ul>
+									<li><a class="icon solid fa-retweet" href="../ServiceCenter/FAQ.jsp">
+									<span>Service Center</span></a>
+										<ul>
+											<li><a href="/ServiceCenter/notice.jsp">°øÁö»çÇ×</a></li>
+											<li><a href="/ServiceCenter/FAQ.jsp">FAQ</a></li>
+											<li><a href="/ServiceCenter/Q&A.jsp">Q&A</a></li>
+										</ul>
+									</li>
+									<li><a class="icon solid fa-sitemap" href="../community/info_board.jsp">
+										<span>community</span></a>
+										<ul>
+											<li><a href="/community/free_board.jsp">ÀÚÀ¯°Ô½ÃÆÇ</a></li>
+											<li><a href="/community/info_board.jsp">Á¤º¸°Ô½ÃÆÇ</a></li>
+										</ul>
+									
+									</li>
 								</ul>
 							</nav>
 
 					</div>
 				</section>
 
+	<div class="project-title"></div>
+	<div class="slider">
+	  <div class="slide">
+	    <h2 class="slide-title">painting</h2>
+          <p class="slide-desc">ÈÞ¾çÁö ¿©ÇàÃ³·³ Áñ°Å¿î Áö¾ðÀÌÀÇ ¼öÃ¤È­ Å¬·¡½º<br>
+          <br><a class="button" href="#">view more</a> 
+             </p>
+          
+	  </div>
+	  <div class="slide">
+	    <h2 class="slide-title">Extreme sports</h2>
+	    <p class="slide-desc">'BMX' ¹è¿ì¸é¼­ ½ºÇÇµå¿Í ½º¸±À» ¸¸³£ÇØº¸ÀÚ!<br>
+          <br><a class="button" href="#">view more</a> </p>
+	  </div>
+	  <div class="slide">
+	    <h2 class="slide-title">Home Baking </h2>
+          <p class="slide-desc">Å×ÀÌºí °¡µæ ´Þ´ÞÇÔÀ» ³ª´©¾îºÁ¿ä<br>
+              <br><a class="button" href="#">view more</a> </p>
+	  </div>
+	  <button class="arrow prev"></button>
+	  <button class="arrow next"></button>
+		<ul class="slide-nav"></ul>
+ </div>
+<!-- partial -->
+            
+
 			<!-- Features -->
 				<section id="features">
 					<div class="container">
 						<header>
-							<h2>Gentlemen, behold! This is <strong>Strongly Typed</strong>!</h2>
+							<h2><strong>M</strong>ake <strong>Y</strong>our <strong>Hob</strong>by<strong>!</strong> Enjoy your life!</h2>
 						</header>
 						<div class="row aln-center">
 							<div class="col-4 col-6-medium col-12-small">
 
 								<!-- Feature -->
 									<section>
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/diy.jpg" alt="" /></a>
 										<header>
-											<h3>Okay, so what is this?</h3>
+											<h3>³ª¸¸ÀÇ ´ÙÀÌ¾î¸® ²Ù¹Ì±â</h3>
 										</header>
-										<p>This is <strong>Strongly Typed</strong>, a free, fully responsive site template
-										by <a href="http://html5up.net">HTML5 UP</a>. Free for personal and commercial use under the
-										<a href="http://html5up.net/license">CCA 3.0 license</a>.</p>
+										<p>´Ù²Ù, ÀÌÁ¦´Â 
+										 <a href="#">Å°Æ®</a>·Î ±¸¸ÅÇÏ¼¼¿ä!
+										</p>
 									</section>
 
 							</div>
@@ -77,13 +120,11 @@
 
 								<!-- Feature -->
 									<section>
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/image-3.jpg" alt="" /></a>
 										<header>
-											<h3>Nice! What is HTML5 UP?</h3>
+											<h3>ÄÚµù ½±°Ô ¹è¿ìÀÚ</h3>
 										</header>
-										<p><a href="http://html5up.net">HTML5 UP</a> is a side project of <a href="http://twitter.com/ajlkn">AJâ€™s</a> (= me).
-										I started it as a way to both test my responsive tools and sharpen up my coding
-										and design skills a bit.</p>
+                                        <p>ÇöÁ÷ÀÚ¿¡°Ô ¹è¿ì´Â ½Ç¹« ÄÚµù<br>±âÃÊºÎÅÍ ½ºÅ³±îÁö!</p>
 									</section>
 
 							</div>
@@ -91,12 +132,11 @@
 
 								<!-- Feature -->
 									<section>
-										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/piano_1.jpg" alt="" /></a>
 										<header>
-											<h3>What's this built with?</h3>
+											<h3>ÀçÁî ÇÇ¾Æ³ë</h3>
 										</header>
-										<p><strong>Responsive Tools</strong> is a simple set of tools for building responsive
-										sites and apps. All of my templates at <a href="http://html5up.net">HTML5 UP</a> are built using these tools.</p>
+										<p>ÇÑ´Þ¸¸¿¡ 'ÀÎ»ýÀÇ È¸Àü¸ñ¸¶' ¿ÏÁÖ °¡´É!</p>
 									</section>
 
 							</div>
@@ -112,8 +152,7 @@
 			<!-- Banner -->
 				<section id="banner">
 					<div class="container">
-						<p>Use this space for <strong>profound thoughts</strong>.<br />
-						Or an enormous ad. Whatever.</p>
+						<p>Ãë¹Ì Ä«Å×°í¸® ¿¹Á¤</p>
 					</div>
 				</section>
 
@@ -128,22 +167,39 @@
 									<!-- Post -->
 										<article class="box post">
 											<header>
-												<h2><a href="#">I donâ€™t want to say <strong>itâ€™s the aliens</strong> ...<br />
-												but itâ€™s the aliens.</a></h2>
+												<h2><a href="#"><strong>HOT!</strong> <br />
+												Áö±Ý ÀÎ±â ÀÖ´Â Ãë¹Ì</a></h2>
 											</header>
-											<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>I mean isn't it possible?</h3>
-											<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-											ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-											sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-											Curabitur leo nibh, rutrum eu malesuada in tristique.</p>
+											<a href="#" class="">
+                                            <!--
+											 class="image featured">--><iframe class="video" width="100%" height="315px" src="https://www.youtube.com/embed/Tuq3XRUOQA8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a><br><br>
+											<h3>ÀÏ»óÀ» À½¾ÇÀ¸·Î Ã¤»öÇØºÁ¿ä, ÇÔ²² ¹è¿ì´Â ¾îÄí½ºÆ½ ±âÅ¸</h3><hr>
+											<p><strong>½ÇÁ¦ ¼ö°­»ýµéÀÇ ¼ö°­ÈÄ±â</strong></p>
+                                            
+                                          
+                                            
+                                            <div class="lesson">   
+                                                <!--<ul>
+                                                <li><a class="fas fa-user-circle fa-5x" href="#"></a><br>&nbsp;&nbsp;¼Û&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</li>       
+                                                </ul> -->
+                                                
+                                                <table>
+                                                    <tr>
+                                                        <td><a class="fas fa-user-circle fa-5x" href="#"></a><br>&nbsp;&nbsp;¼Û&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</td>
+                                                        <td>ÁøÂ¥ ½±°í Àç¹Õ°Ô °¡¸£ÃÄ ÁÖ¼¼¿ë</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="fas fa-user-circle fa-5x" href="#"></a><br>&nbsp;&nbsp;±è&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</td>
+                                                        <td>±×³É ±×·¡¿ä ÇÐ¿ø ´Ù´Ï±æ</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="fas fa-user-circle fa-5x" href="#"></a><br>&nbsp;&nbsp;º¯&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</td>
+                                                        <td>good good</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
 											<ul class="actions">
-												<li><a href="#" class="button icon solid fa-file">Continue Reading</a></li>
+												<li><a href="#" class="button icon solid fa-file">Å¬·¡½º ¼ö°­½ÅÃ»ÇÏ±â</a></li>
 											</ul>
 										</article>
 
@@ -192,7 +248,7 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date">July 30</span>
+																<span class="date">1°³¿ù</span>
 																<h3><a href="#">Just another post</a></h3>
 															</header>
 															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
@@ -205,7 +261,7 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date">July 28</span>
+																<span class="date">2°³¿ù</span>
 																<h3><a href="#">And another post</a></h3>
 															</header>
 															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
@@ -218,7 +274,7 @@
 													<!-- Excerpt -->
 														<article class="box excerpt">
 															<header>
-																<span class="date">July 24</span>
+																<span class="date">3°³¿ù</span>
 																<h3><a href="#">One more post</a></h3>
 															</header>
 															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
@@ -235,7 +291,7 @@
 												<li>
 
 													<!-- Highlight -->
-														<article class="box highlight">
+														<!-- <article class="box highlight">
 															<header>
 																<h3><a href="#">Something of note</a></h3>
 															</header>
@@ -250,10 +306,10 @@
 														</article>
 
 												</li>
-												<li>
+												<li> -->
 
 													<!-- Highlight -->
-														<article class="box highlight">
+														 <!--  <article class="box highlight">
 															<header>
 																<h3><a href="#">Something of less note</a></h3>
 															</header>
@@ -265,7 +321,7 @@
 															<ul class="actions">
 																<li><a href="#" class="button icon solid fa-file">Learn More</a></li>
 															</ul>
-														</article>
+														</article>-->
 
 												</li>
 											</ul>
@@ -281,7 +337,7 @@
 				<section id="footer">
 					<div class="container">
 						<header>
-							<h2>Questions or comments? <strong>Get in touch:</strong></h2>
+							<h2>ÀÚ½Å¸¸ÀÇ Ãë¹Ì Å¬·¡½º¸¦ µî·ÏÇÏ°í ½Í´Ù¸é <strong>MY HOB!</strong>¿¡ ¹®ÀÇ ÇØÁÖ¼¼¿ä.</h2>
 						</header>
 						<div class="row">
 							<div class="col-6 col-12-medium">
@@ -306,9 +362,7 @@
 							</div>
 							<div class="col-6 col-12-medium">
 								<section>
-									<p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet
-									mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur
-									leo nibh, rutrum eu malesuada.</p>
+									<p></p>
 									<div class="row">
 										<div class="col-6 col-12-small">
 											<ul class="icons">
@@ -362,6 +416,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+            
 	</body>
 </html>

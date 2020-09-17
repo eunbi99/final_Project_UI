@@ -17,6 +17,9 @@ body{
  	list-style:none;
  }
  
+ ul {
+　　　list-style-type: none;
+}
 
 .content {
   margin:0;
