@@ -101,7 +101,7 @@
 								                <td align="center" width ="150"><b>아이디</b></td>
 								                <td><input type="text" name="my_name" size="20" value="test_id">
 								            </tr>
-								            
+								            <tr>
 								                <td align="center" width ="150"><b>비밀번호</b></td>
 								                <td>
 								                	<input type="password" name="passwd" mexlength="16" value="비밀번호를 입력하세요.">
