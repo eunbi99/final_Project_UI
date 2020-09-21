@@ -66,7 +66,7 @@ public class BoardDBBean {
 		      number=rs.getInt(1)+1; // 작성된 글이 있다면 그 글의 넘버에 1을 더한다.
 		    else
 		      number=1; //작성된 글이 없다면 넘버는 1
-		   // ���Ŀ� ��� �ٴ� �κп��� ����
+		   
 		   /* if (num!=0) {  
 		      sql="update board set re_step=re_step+1 ";
 		      sql += "where ref= ? and re_step> ?";
@@ -145,7 +145,7 @@ public class BoardDBBean {
             conn = getConnection();
             
             pstmt = conn.prepareStatement(
-            	"select * from board order by ref desc, re_step asc limit ?,? ");
+            	"select * from board order by num desc, ref desc, re_step asc limit ?,? ");
             pstmt.setInt(1, start-1);
 			pstmt.setInt(2, end);
             rs = pstmt.executeQuery();

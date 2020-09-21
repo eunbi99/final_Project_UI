@@ -15,7 +15,7 @@
 
   if(check==1){
 %>
-	<meta http-equiv="Refresh" content="0;url=../assets/community/free_board.jsp?pageNum=<%=pageNum%>">
+	<meta http-equiv="Refresh" content="0;url=../community/free_board.jsp?pageNum=<%=pageNum%>">
 <%}else{%>
     <script type="text/javascript">      
         
