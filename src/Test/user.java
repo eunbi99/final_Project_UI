@@ -1,28 +1,36 @@
 package Test;
 
 public class user {
-	private String userID;
-	private String userPassword;
-	private String userName;
-	private String hobby;
-	private String memo;
-	public String getUserID() {
-		return userID;
+	   private String id ;
+	   private String passwd;
+	   private String name;
+	   private String email; 
+	   private String hobby ;
+	   private String phone ;
+	   
+	public String getId() {
+		return id;
 	}
-	public void setUserID(String userID) {
-		this.userID = userID;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getUserPassword() {
-		return userPassword;
+	public String getPasswd() {
+		return passwd;
 	}
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
 	}
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getHobby() {
 		return hobby;
@@ -30,12 +38,11 @@ public class user {
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
-	public String getMemo() {
-		return memo;
+	public String getPhone() {
+		return phone;
 	}
-	public void setMemo(String memo) {
-		this.memo = memo;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	
-
+	   
 }
