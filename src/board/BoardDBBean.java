@@ -101,8 +101,6 @@ public class BoardDBBean {
 			pstmt.setString(9, article.getContent());
             pstmt.setString(10, article.getBoardType());
 
-			
-			
             pstmt.executeUpdate();
         } catch(Exception ex) {
             ex.printStackTrace();
@@ -124,7 +122,7 @@ public class BoardDBBean {
 	}
 
 	//board테이블에 저장된 전체글의 수를 얻어냄.(select문)<=list.jsp에서 사용.
-	public int getArticleCount()  throws Exception {
+	public int getArticleCount(String boardType) throws Exception {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -134,7 +132,8 @@ public class BoardDBBean {
         try {
             conn = getConnection();
             
-            pstmt = conn.prepareStatement("select count(*) from board");
+            pstmt = conn.prepareStatement("select count(*) from board  where boardType=?");
+            pstmt.setString(1,boardType);
             rs = pstmt.executeQuery();
 
             if (rs.next()) {
@@ -161,7 +160,7 @@ public class BoardDBBean {
             conn = getConnection();
             
             pstmt = conn.prepareStatement(
-            	"select * from board where boardType= ? order by num desc, ref desc, re_step asc limit ?,? ");
+            	"select * from board where boardType= ? order by ref desc, re_step asc limit ?,? ");
             pstmt.setString(1, boardType);
             pstmt.setInt(2, start-1);
 			pstmt.setInt(3, end);
@@ -182,6 +181,7 @@ public class BoardDBBean {
                   article.setRe_step(rs.getInt("re_step"));
 				  article.setRe_level(rs.getInt("re_level"));
                   article.setContent(rs.getString("content"));
+                  article.setBoardType(rs.getString("boardType"));
 			     
 				  
                   articleList.add(article);
