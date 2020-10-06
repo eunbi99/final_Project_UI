@@ -35,20 +35,12 @@
    	 </td>
   </tr>
   
-  <tr>
-   	<td width="70" align="center"> 이메일  </td>
-   	<td> <input type="text" name="email"></td>
-  </tr>
-  
+
    <tr>
    	<td width="70" align="center"> 내용 </td>
    	<td width="300" align="left"><textarea name="content" rows="13" cols="40"></textarea></td>
   </tr>
   
-   <tr>
-   	<td width="70" align="center"> 비밀번호 </td>
-   	<td> <input type="password" size="8" maxlength="18"name="passwd"></td>
-  </tr>
   
    <tr>
    	<td colspan="2"> <input type="submit" value="글쓰기">
