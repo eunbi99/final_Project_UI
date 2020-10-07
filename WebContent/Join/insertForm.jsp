@@ -103,6 +103,24 @@
 			<td><input type="text" name="email" placeholder="이메일을 입력해주세요."></td>
 		</tr>	
 		<tr>
+			<td>주소</td>
+		</tr>
+		<tr>
+			<td><input type="text" name="address" placeholder="주소를 입력해주세요."></td>
+		</tr>	
+		<tr>
+			<td>휴대전화</td>
+		</tr>
+		<tr>
+			<td><input type="text" name="phone" placeholder="전화번호를 입력해주세요."></td>
+		</tr>	
+		<tr>
+			<td>생년월일</td>
+		</tr>
+		<tr>
+			<td><input type="text" name="birth" placeholder="생년월일을 입력해주세요."></td>
+		</tr>	
+		<tr>
 			<td>hobby</td>
 		</tr>	
 		<tr>
@@ -116,9 +134,6 @@
 				<label for="ch3"></label>
 			</td>
 		</tr>
-		<tr>
-			<td><input type="text" name="phone" placeholder="전화번호를 입력해주세요."></td>
-		</tr>	
 		<tr>
 			<td><input type="submit" value="가입하기" id="submit"></td>
 		</tr>	
