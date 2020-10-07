@@ -32,6 +32,9 @@
 		count=dbPro.getArticleCount(boardType);
 	}
 		number = count-(currentPage-1)*pageSize;
+		
+		
+
 %>
 <html>
 <head>
@@ -195,7 +198,7 @@
 						}
 					}
 				%>
-				</div>
+	
                         </div>
                           </div>
                            </section>

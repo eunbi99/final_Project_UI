@@ -45,7 +45,7 @@
 	   		if(request.getParameter("num")==null) {%>
 	   			<input type="text" size="40" maxlength="50" name="subject">
 	   	<% }else {%>
-	   			<input type="text" size="40" maxlength="50" name="subject" value="답변합니다.">
+	   			<input type="text" size="40" maxlength="50" name="subject" readonly value="답변합니다.">
 	   		
 	   	<%}%>
    	 </td>
