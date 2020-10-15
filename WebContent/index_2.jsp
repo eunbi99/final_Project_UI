@@ -5,7 +5,7 @@
 <title>MY HOB!</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<link rel="stylesheet" href="../assets/css/main.css?var=2"/>
+<link rel="stylesheet" href="../assets/css/main.css"/>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css'>
 <style type="text/css">
@@ -58,19 +58,11 @@
                            </li>
                         </ul>
                         <ul class="navtop">   
-                                <ul class="navtop"> 
-                        			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
-	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
-	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
-	                                	
-                                	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
-	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
-	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
-                                	<%}else{%>       
-                                	<li><a href="/Join/LoginForm.jsp">Login</a></li>
-				                    <li><a href="/Join/insertForm.jsp">Join</a></li>
-				                    <%} %>
-                                            
+                                
+                                    <li><a href="#">Logout</a></li>
+				                  
+                                    <li><a href="#"><img src="../images/gear.png"></a></li>
+                                                                            
                         </ul>
                      </nav>
 
