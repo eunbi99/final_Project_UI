@@ -15,8 +15,9 @@
 	String name=request.getParameter("name");
 	String email=request.getParameter("email");
 	String address=request.getParameter("address");
-	String phone=request.getParameter("phone");
 	String birth=request.getParameter("birth");
+	String phone=request.getParameter("phone");
+
 	String[] check = request.getParameterValues("hobby");
 	String hobby ="";
 	 for(int i=0; i<check.length; i++){
@@ -28,7 +29,6 @@
 	
 	Connection conn=null;
 	PreparedStatement pstmt=null;
-
 	try{
 		String url="jdbc:mysql://localhost:3306/bdbjsp?serverTimezone=UTC";
 		String dbId="root";
@@ -43,16 +43,15 @@
 		pstmt.setString(3,name);
 		pstmt.setString(4,email);
 		pstmt.setString(5,address);
-		pstmt.setString(6,phone);
-		pstmt.setString(7,birth);
+		pstmt.setString(6,birth);
+		pstmt.setString(7,phone);
+		
 		pstmt.setString(8,hobby);
 		pstmt.executeUpdate();
 	}catch(Exception e){
 		e.printStackTrace();
 		
 	}
-
-
 %>
 <%=str%>
 <script>

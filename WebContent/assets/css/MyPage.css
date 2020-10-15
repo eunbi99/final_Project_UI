@@ -3,11 +3,12 @@
 #my-Sidebar {
         width: 250px;
         height:100%;
-        padding:px;
         margin-bottom: 20px;
         float: left;
         background-color: #fff; 
         margin-top:100px;
+        margin-left:130px;
+        
       }
  
  ul{
@@ -76,13 +77,14 @@ li {
 	margin:0 10px;
 }
 .profile{
-	width:600px;
-	height:450px;
+	width:700px;
+	height:100%;
 	border: 2px solid gray;
-	border-radius :3%;
+	border-radius: 20px;
 	display:flex;
 	position: relative;
-	right:-150px;
+	right:-80px;
+	
 }
 
 .profile img{

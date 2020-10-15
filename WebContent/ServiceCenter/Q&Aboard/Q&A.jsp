@@ -10,6 +10,7 @@
 %>
 
 <%
+	String id=(String)session.getAttribute("id");
 	String pageNum = request.getParameter("pageNum");
 	if (pageNum == null) {
 	    pageNum = "1";
@@ -155,28 +156,38 @@
 			<%}%>
 			</table>
 			<%}%>
-				<table>
+			<table>
 				  <tr>
-				    <td align="right">
-				       <a href="/ServiceCenter/Q&Aboard/qna_writeForm.jsp">글쓰기</a>
+				    <td align="center">
+				    
+					<% if (session.getAttribute("id") != null) {%>
+						<a href="/community/freeboard/writeForm.jsp" class="write">글쓰기</a>
+					<%} else {%>
+						<button type="button" class="write" onclick="writeCheck()" >글쓰기</button>
+					<%} %>
 				    </td>
 				  </tr>
-				</table>
+			</table>
 			
+				<form name="search1" method="post" action="/community/infoboard/info_board.jsp">
 				<div>
+				<table>
 					<tr>
 				  		<td>
-				  			<select name="searchOption">
-					  			<option value="all"> 제목+이름+내용 </option>
-								<option value="writer" >이름</option>
-								<option value="content" >내용 </option>
-								<option value="title"  >제목</option>	
+				  			<select name="keyField">
+				  				<option value="" selected>전체</option>
+								<option value="writer">이름</option>
+								<option value="content">내용 </option>
+								<option value="subject">제목</option>	
 				  			</select>
 					  		<input type="text" id="keyword" name="keyword">
-					  		<input type="submit" name="submit" value="검색">
+					  		<input type="submit" value="검색">
+					  	
 				  		</td>
 				  	</tr>
+				  	</table>
 			  	</div>
+			</form>	
 			  	<div style=text-align:center;>
 			<%
 				if(count>0){
@@ -218,5 +229,11 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script>
+			function writeCheck(){
+				alert("회원만 글을 쓸수있습니다.");
+				location.href="/Join/LoginForm.jsp";
+			}
+			</script>
 	</body>
 </html>

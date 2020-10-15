@@ -15,10 +15,15 @@
 	
 	if(id == null || id == ""){
 		response.sendRedirect("../Join/insertForm.jsp"); //로그인실패
-	} else { 
+		
+	}else if(id.equals("admin")){
+		session.setAttribute("id",id);
+		response.sendRedirect("../index.jsp");
+	}else{ 
 		session.setAttribute("id", id);
 		response.sendRedirect("../index.jsp");
-} %>
+}%>
+
 
 
 

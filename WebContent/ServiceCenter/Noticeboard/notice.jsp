@@ -10,6 +10,8 @@
 %>
 
 <%
+	String id =(String)session.getAttribute("id");
+	
 	String pageNum = request.getParameter("pageNum");
 	if (pageNum == null) {
 	    pageNum = "1";
@@ -144,7 +146,7 @@
 			<%}%>
 			</table>
 			<%}%>
-			
+			<%if("admin".equals(session.getAttribute("id"))){ %>
 			<table>
 			  <tr>
 			    <td align="right">
@@ -152,6 +154,7 @@
 			    </td>
 			  </tr>
 			</table>
+			<%}%>
 			<div>
 					<tr>
 				  		<td>

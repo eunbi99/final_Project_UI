@@ -18,7 +18,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -26,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	
 }
 
 ol, ul {
@@ -61,10 +63,10 @@ input::-moz-focus-inner {
 }
 
 input, select, textarea {
-	/*-moz-appearance: none;
-	 -webkit-appearance: none; 
+	-moz-appearance: none;
+	/*-webkit-appearance: none;*/
 	-ms-appearance: none;
-	/* appearance: none; */
+	/*appearance: none;*/
 }
 
 /* Basic */
@@ -133,7 +135,7 @@ input, select, textarea {
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		color: #666;
 		text-decoration: none;
-		border-bottom: solid 1px #ddd;
+		/*border-bottom: solid 1px #ddd;*/
 	}
 
 		a strong {
@@ -1848,7 +1850,7 @@ input, select, textarea {
 		font-size: 0.85em;
 		letter-spacing: 2px;
 		padding: 0.25em 1em 0.25em 1em;
-		margin: 0 0 2.5em 0;
+		margin: 10em 0 2.5em 0;
 	}
 
 /* Icons */
@@ -2113,7 +2115,58 @@ input, select, textarea {
     
         }
 
-        
+/*Category*/   
+
+
+
+c_wrap {
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  
+}
+
+
+.c_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c_menu {
+  display: flex;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 30px;
+  box-sizing: border-box;
+  border: ;
+  
+ 
+
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 1;
+  
+  transition: opacity 0.2s linear, transform 0.2s ease-in-out;
+}
+
+.menu-item.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 
 /*Slider*/
 
@@ -2199,8 +2252,8 @@ input, select, textarea {
 }
 .slide-image,
 .slide-image img{
-  height: 100%;
-  width: 100%;
+  height:auto;
+  width:100%;
     
 }
 
@@ -2354,7 +2407,7 @@ input, select, textarea {
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		color: #666;
 		text-decoration: none;
-		border-bottom: solid 1px #ddd;
+		/*border-bottom: solid 1px #ddd;*/
 	}
 
 		a strong {
@@ -4173,6 +4226,7 @@ input, select, textarea {
 		left: 0;
 		width: 100%;
 		cursor: default;
+		
 	}
 
 		#nav > ul > li {
@@ -4279,7 +4333,7 @@ input, select, textarea {
 				top: -0.75em;
 				border-left: solid 0.75em rgba(255, 255, 255, 0);
 				border-right: solid 0.75em rgba(255, 255, 255, 0);
-				border-bottom: solid 0.75em #ccc;
+				/*border-bottom: solid 0.75em #ccc;*/
 			}
 
 		.dropotron span, .dropotron a {
@@ -4315,6 +4369,7 @@ input, select, textarea {
             width: 100%;
             cursor: default;
             font-size: 0.8em;
+            
     
         }
 
@@ -4490,65 +4545,22 @@ input, select, textarea {
 		#features ul.actions {
 			margin-top: 1.25em;
 		}
+		
 
 /* Banner */
 
-	#banner {
-		position: relative;
-		overflow: hidden;
-		background: #fff;
-		color: #fff;
-		text-align: center;
-		border-top: solid 2px #e5e5e5;
-		border-bottom: solid 2px #e5e5e5;
-		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
-		position: relative;
-		text-transform: uppercase;
-		background: url("../../images/banner.jpg");
-		background-size: cover;
-		padding: 10em 0;
-	}
+	
+	
 
-		#banner p {
-			font-weight: 400;
-			font-size: 2em;
-			line-height: 1.5em;
-			letter-spacing: 4px;
-			text-align: center;
-			margin: 0;
-		}
 
-		#banner strong {
-			color: inherit;
-		}
 
-		#banner > .container {
-			position: relative;
-		}
 
-			#banner > .container:before, #banner > .container:after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 50%;
-				width: 35px;
-				height: 141px;
-				margin-top: -70px;
-				background: url("images/bracket.svg");
-				opacity: 0.15;
-			}
 
-			#banner > .container:before {
-				left: 0;
-			}
 
-			#banner > .container:after {
-				-moz-transform: scaleX(-1);
-				-webkit-transform: scaleX(-1);
-				-ms-transform: scaleX(-1);
-				transform: scaleX(-1);
-				right: 0;
-			}
+/*Moving Box*/
+
+
+
 
 /* Main */
 
@@ -4588,7 +4600,7 @@ input, select, textarea {
 	#sidebar > article {
 		border-top: solid 2px #e5e5e5;
 		box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
-		margin: 5em 0 0 0;
+		margin: 6em 0 0 0;
 		padding: 5em 0 0 0;
 	}
 
@@ -4599,6 +4611,14 @@ input, select, textarea {
 			margin: 0;
 			padding: 0;
 		}
+		
+		
+		
+		
+/*Best*/
+
+
+
 
 /* Footer */
 
@@ -5185,7 +5205,7 @@ input, select, textarea {
 		color: #fff;
 		text-align: center;
 		border-top: solid 2px #e5e5e5;
-		border-bottom: solid 2px #e5e5e5;
+		/*border-bottom: solid 2px #e5e5e5;*/
 		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
 		position: relative;
 		text-transform: uppercase;
