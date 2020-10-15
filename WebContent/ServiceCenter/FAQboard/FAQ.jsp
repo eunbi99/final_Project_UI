@@ -55,18 +55,24 @@
                               </ul>
                            </li>
                         </ul>
-                        <ul class="navtop">   
-                                
-                                    <li><a href="/Join/LoginForm.jsp">Login</a></li>
+                        <ul class="navtop"> 
+                        			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
+	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	
+                                	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
+                                	<%}else{%>       
+                                	<li><a href="/Join/LoginForm.jsp">Login</a></li>
 				                    <li><a href="/Join/insertForm.jsp">Join</a></li>
-                                    <li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a>
-                                    
-                                    </li>             
+				                    <%} %>
+                                            
                         </ul>
                      </nav>
 
                </div>
-            </section>	
+            </section>
 			<div id="my-Sidebar">
         	<h2>고객센터</h2>
         		<ul>
@@ -110,11 +116,11 @@
     </div>
     <div class="accordion-item">
       <button id="accordion-button-4" aria-expanded="false">
-      	<span class="accordion-title">Q 질문4</span>
+      	<span class="accordion-title">Q 동영상 오류시 어떻게 해야하나요?</span>
       	<span class="icon" aria-hidden="true"></span>
       </button>
       <div class="accordion-content">
-         <p><h5>A. 답변4</h5></p>
+         <p><h5>A. 팝업 해제를 다시 시도해보세요. </h5></p>
       </div>
     </div>
     <div class="accordion-item">

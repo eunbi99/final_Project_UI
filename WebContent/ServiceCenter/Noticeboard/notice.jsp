@@ -50,7 +50,7 @@
 		<div id="page-wrapper">
 
 		<!-- Header -->
-            <section id="header">
+           <section id="header">
                <div class="container">
 
                   <!-- Logo-->
@@ -91,13 +91,19 @@
                               </ul>
                            </li>
                         </ul>
-                        <ul class="navtop">   
-                                
-                                    <li><a href="/Join/LoginForm.jsp">Login</a></li>
+                        <ul class="navtop"> 
+                        			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
+	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	
+                                	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
+                                	<%}else{%>       
+                                	<li><a href="/Join/LoginForm.jsp">Login</a></li>
 				                    <li><a href="/Join/insertForm.jsp">Join</a></li>
-                                    <li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a>
-                                    
-                                    </li>             
+				                    <%} %>
+                                            
                         </ul>
                      </nav>
 
@@ -160,6 +166,7 @@
 			<%}%>
 			</table>
 			<%}%>
+			
 			<%if("admin".equals(session.getAttribute("id"))){ %>
 			<table>
 			  <tr>
@@ -169,21 +176,25 @@
 			  </tr>
 			</table>
 			<%}%>
-			<div>
+			<form name="search1" method="post" action="/ServiceCenter/Noticeboard/notice.jsp">
+				<div>
+				<table>
 					<tr>
 				  		<td>
-				  			<select name="searchOption">
-					  			<option value="all"> 제목+이름+내용 </option>
-								<option value="writer" >이름</option>
-								<option value="content" >내용 </option>
-								<option value="title"  >제목</option>	
+				  			<select name="keyField">
+				  				<option value="" selected>전체</option>
+								<option value="writer">이름</option>
+								<option value="content">내용 </option>
+								<option value="subject">제목</option>	
 				  			</select>
 					  		<input type="text" id="keyword" name="keyword">
-					  		<input type="submit" name="submit" value="검색">
+					  		<input type="submit" value="검색">
+					  	
 				  		</td>
-				  	
 				  	</tr>
+				  	</table>
 			  	</div>
+			</form>	
 			  	<div style="text-align:center";>
 			<%
 				if(count>0){

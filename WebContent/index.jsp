@@ -56,8 +56,7 @@
                               </ul>
                            
                            </li>
-                        </ul>
-                        <ul class="navtop">   
+                        </ul> 
                                 <ul class="navtop"> 
                         			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>

@@ -84,7 +84,7 @@
              <div class="row">
                  <div class="column">
                    <div class="card">
-                      <a href="/HobbyDetail/HD_Art1.jsp" class="image featured"><img src="/assets/css/images/Art1.jpg" alt="" /></a>
+                      <a href="/HobbyDtail/HD_Art1.jsp" class="image featured"><img src="/assets/css/images/Art1.jpg" alt="" /></a>
                       <header>
                         <h3>공간감을 살리는 스케치 스킬</h3>
                      </header>

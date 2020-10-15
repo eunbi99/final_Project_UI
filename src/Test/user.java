@@ -1,5 +1,7 @@
 package Test;
 
+import java.sql.Timestamp;
+
 public class user {
 	   private String id ;
 	   private String passwd;
@@ -9,6 +11,7 @@ public class user {
 	   private String phone;
 	   private String birth;
 	   private String hobby;
+	   private Timestamp reg_date;
 	public String getId() {
 		return id;
 	}
@@ -57,5 +60,12 @@ public class user {
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
+	public Timestamp getReg_date() {
+		return reg_date;
+	}
+	public void setReg_date(Timestamp reg_date) {
+		this.reg_date = reg_date;
+	}
+	
 	   
 }
