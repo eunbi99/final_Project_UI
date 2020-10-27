@@ -4,7 +4,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>정보게시판</title>
+<script>
+function boardCheck(){
+	if(document.free.subject.value==""){
+		alert("제목을 입력하세요");
+		document.free.subject.focus();
+		return false;
+	}
+	if(document.free.content.value==""){
+		alert("내용 입력하세요");
+		document.free.content.focus();
+		return false;
+	}
+	if(document.free.passwd.value==""){
+		alert("비밀번호 입력하세요");
+		document.free.passwd.focus();
+		return false;
+	}
+}
+</script>
 </head>
 <body>
 <%
@@ -22,7 +41,7 @@
 
 
 <p> 글쓰기 </p>
-<form method="post" action="/community/infoboard/info_writePro.jsp">
+<form method="post" action="/community/infoboard/info_writePro.jsp" onsubmit="return boardCheck()">
 <input type="hidden" name="boardType" value="info">
 <input type="hidden" name="num" value="<%=num%>">
 <input type="hidden" name="ref" value="<%=ref%>">

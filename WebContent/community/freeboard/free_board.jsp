@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import = "board.BoardDBBean" %>
 <%@ page import = "board.BoardDataBean" %>
@@ -10,7 +10,7 @@
 %>
 
 <%
-
+	request.setCharacterEncoding("utf-8");
 	String id=(String)session.getAttribute("id");
 	String pageNum = request.getParameter("pageNum");
 	if (pageNum == null) {
@@ -32,18 +32,10 @@
 	if(request.getParameter("keyField")!=null){
 		 keyField=request.getParameter("keyField");	
 		 keyword=request.getParameter("keyword");
-	
-		request.getSession().setAttribute("keyField", keyField);
-		request.getSession().setAttribute("keyWord", keyword);
-	
-	}else if(request.getSession().getAttribute("keyField") != null){
-		keyField = (String)request.getSession().getAttribute("keyField");
-		keyword = (String)request.getSession().getAttribute("keyWord");
-
 	}
 
 	articleList = dbPro.getArticles(startRow, pageSize, boardType, keyField, keyword);
-	
+
 	if(articleList!=null){
 		count=dbPro.getArticleCount(boardType);
 	}
@@ -79,14 +71,7 @@
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                           <li><a href="/MyPage/MyClass.jsp">
-                           <span>MY Page</span></a>
-                              <ul>
-                                 <li><a href="/MyPage/MyClass.jsp">My Class</a></li>
-                                 <li><a href="/MyPage/HobbyLog.jsp">활동로그</a></li>
-                                 <li><a href="/MyPage/Profile.jsp">내 프로필</a></li>
-                                 <li><a href="/MyPage/EditProfile.jsp">프로필수정</a></li>
-                              </ul>
+                           
                            <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
                            <span>Service Center</span></a>
                               <ul>
@@ -167,12 +152,12 @@
 			    	if(article.getRe_level()>0){
 			    		wid=5*(article.getRe_level());
 			    %>
-			    	<img src="/images/level-0000.jpg" width="<%=wid%>"height="16">
+			    	<img src="/images/level-0000.gif" width="<%=wid%>"height="16">
 			    	<img src="/images/re-0000.gif">
 			    	
 			    <% //원글이라면
 			    	}else{ %>
-			  		<img src="/images/level-0000.jpg" width="<%=wid%>"height="16">
+			  		<img src="/images/level-0000.gif" width="<%=wid%>"height="16">
 			  	<% } %>
 			  	
 			    
@@ -198,9 +183,9 @@
 			    <td align="center">
 			    
 				<% if (session.getAttribute("id") != null) {%>
-					<a href="/community/freeboard/writeForm.jsp" class="write">글쓰기</a>
+					<button type="button" class="write" onclick="writeCheck()">글쓰기</button>
 				<%} else {%>
-					<button type="button" class="write" onclick="writeCheck()" >글쓰기</button>
+					<button type="button" class="write" onclick="IdCheck()" >글쓰기</button>
 				<%} %>
 			    </td>
 			  </tr>
@@ -214,7 +199,7 @@
 				  		<td>
 				  			<select name="keyField">
 				  				<option value="" selected>전체</option>
-								<option value="writer">이름</option>
+								<option value="writer">작성자</option>
 								<option value="content">내용 </option>
 								<option value="subject">제목</option>	
 				  			</select>
@@ -269,6 +254,10 @@
 			<script src="../assets/js/main.js"></script>
 			<script>
 			function writeCheck(){
+				location.href="/community/freeboard/writeForm.jsp";
+			}
+			
+			function IdCheck(){
 				alert("회원만 글을 쓸수있습니다.");
 				location.href="/Join/LoginForm.jsp";
 			}

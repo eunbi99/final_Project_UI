@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import = "board.BoardDBBean" %>
 <%@ page import = "board.BoardDataBean" %>
@@ -10,6 +10,7 @@
 %>
 
 <%
+	request.setCharacterEncoding("utf-8");
 	String id =(String)session.getAttribute("id");
 	
 	String pageNum = request.getParameter("pageNum");
@@ -26,9 +27,17 @@
 	BoardDBBean dbPro = BoardDBBean.getInstance();
 	
 	String boardType="notice";
-	String searchOption=request.getParameter("searchOption");	
-	String keyword=request.getParameter("keyword");
-	articleList = dbPro.getArticles(startRow, pageSize, boardType,searchOption,keyword);
+	String keyField="";
+	String keyword="";
+	
+	if(request.getParameter("keyField")!=null){
+		 keyField=request.getParameter("keyField");	
+		 keyword=request.getParameter("keyword");
+	
+		
+	}
+	
+	articleList = dbPro.getArticles(startRow, pageSize, boardType,keyField,keyword);
 	
 	if(articleList!=null){
 		count=dbPro.getArticleCount(boardType);
@@ -63,18 +72,11 @@
                          	<li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
-                                 <li><a href="/HobbyTest/mbti.jsp">취미 검사</a></li>
+                                 <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                           <li><a href="/MyPage/MyClass.jsp">
-                           <span>MY Page</span></a>
-                              <ul>
-                                 <li><a href="/MyPage/MyClass.jsp">My Class</a></li>
-                                 <li><a href="/MyPage/HobbyLog.jsp">활동로그</a></li>
-                                 <li><a href="/MyPage/Profile.jsp">내 프로필</a></li>
-                                 <li><a href="/MyPage/EditProfile.jsp">프로필수정</a></li>
-                              </ul>
+                         
                            <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
                            <span>Service Center</span></a>
                               <ul>
@@ -171,12 +173,12 @@
 			<table>
 			  <tr>
 			    <td align="right">
-			       <a href="/ServiceCenter/Noticeboard/notice_writeForm.jsp">글쓰기</a>
+			      <button type="button" class="write" onclick="writeCheck()">글쓰기</button>
 			    </td>
 			  </tr>
 			</table>
 			<%}%>
-			<form name="search1" method="post" action="/ServiceCenter/Noticeboard/notice.jsp">
+			<form name="search3" method="post" action="/ServiceCenter/Noticeboard/notice.jsp">
 				<div>
 				<table>
 					<tr>
@@ -237,5 +239,10 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script>
+			function writeCheck(){
+				location.href="/ServiceCenter/Noticeboard/notice_writeForm.jsp";
+			}
+			</script>
 	</body>
 </html>

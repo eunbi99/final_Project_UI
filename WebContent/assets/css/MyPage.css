@@ -90,7 +90,7 @@ li {
 }
 .profile{
    max-width:100%;
-   height:100%;
+   height:auto;
    border: 2px solid gray;
    border-radius: 20px;
    display:flex;
@@ -128,14 +128,16 @@ li {
 .profile .right {
    width:65%
    background:#fff;
-   position: relative;
-   
-   margin-top:10px;
+   position: relative;   
+   margin-left:10em;
+   leftt:10em;
+   margin-top:0;
 }
 
 .right h3{
    position: relative;
-   right:13.5em;
+   margin-top:-1em;;
+   right:11em;
    
 }
 
@@ -4055,5 +4057,4 @@ img:focus {
 }
 
 
-.wrapper .module-team .team .team-cards {
-  position: relat
+.wrapper .modul

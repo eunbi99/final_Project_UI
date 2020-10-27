@@ -39,14 +39,7 @@
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                           <li><a href="/MyPage/MyClass.jsp">
-                           <span>MY Page</span></a>
-                              <ul>
-                                 <li><a href="/MyPage/MyClass.jsp">My Class</a></li>
-                                 <li><a href="/MyPage/HobbyLog.jsp">활동로그</a></li>
-                                 <li><a href="/MyPage/Profile.jsp">내 프로필</a></li>
-                                 <li><a href="/MyPage/EditProfile.jsp">프로필수정</a></li>
-                              </ul>
+                          
                            <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
                            <span>Service Center</span></a>
                               <ul>
@@ -158,7 +151,7 @@
 												</td>
 											</tr>
 											
-											 <tr>
+											 <%-- <tr>
 								                <td align="center"><b>일반전화</b></td>
 								                <td>
 								               		 <select name="homephone1" id="homephone" style="width:70px;">
@@ -185,7 +178,7 @@
 								                </td>
 								            </tr>
 								            
-								          
+								          --%>
 								         
 								            <tr>
 								                <td align="center"><b>생년월일</b></td>

@@ -7,6 +7,8 @@
 	String id =(String)session.getAttribute("id");
 	user use = userjoin.getData(id);
 %>
+
+
 <!DOCTYPE HTML>
 <!--
 	Strongly Typed by HTML5 UP
@@ -42,14 +44,7 @@
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                           <li><a href="/MyPage/MyClass.jsp">
-                           <span>MY Page</span></a>
-                              <ul>
-                                 <li><a href="/MyPage/MyClass.jsp">My Class</a></li>
-                                 <li><a href="/MyPage/HobbyLog.jsp">활동로그</a></li>
-                                 <li><a href="/MyPage/Profile.jsp">내 프로필</a></li>
-                                 <li><a href="/MyPage/EditProfile.jsp">프로필수정</a></li>
-                              </ul>
+                          
                            <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
                            <span>Service Center</span></a>
                               <ul>
@@ -106,8 +101,7 @@
                               <div class="left">
                               <input type="hidden" name="ID" />
                               <img src="../images/profile_img.jpg" alt="" width=100px ><br>                              
-                                 <h4>김은비</h4>
-                                 <p>beawha@naver.com</p><br><br>
+                                 <h4><%=use.getName() %></h4>
                            </form>                                 
                               </div>
                               
@@ -115,22 +109,22 @@
                                     <h3>프로필 카드</h3>
                                     <div class="data">
                                        <h4>가입일</h4>
-                                       <p>2020/09/13</p>
+                                       <p><%=use.getReg_date() %></p>
+                                    </div>
+                                    <div class="data">
+                                       <h4>이메일</h4>
+                                       <p><%=use.getEmail() %></p>
+                                    </div>
+                                    <div class="data">
+                                       <h4>생일</h4>
+                                       <p><%=use.getBirth() %></p>
                                     </div>
                                     <div class="data">
                                        <h4>내클래스</h4>
                                        <p>꽃꽃이 클래스,바리스타 클래스, 쿠킹 클래스</p>
                                     </div>
                                     <div class="data">
-                                       <h4>닉네임</h4>
-                                       <p>배화짱</p>
-                                    </div>
-                                    <div class="data">
                                        <h4>내용4</h4>
-                                       <p>내용</p>
-                                    </div>
-                                    <div class="data">
-                                       <h4>내용5</h4>
                                        <p>내용</p>
                                     </div>
                               </div>
@@ -151,5 +145,5 @@
          <script src="../assets/js/main.js"></script>
    </body>
 
-</body>
+
 </html>

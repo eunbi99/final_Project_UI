@@ -1,5 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "Test.user" %>
+<%@ page import = "Test.userDB" %>
+<%@ page import = "java.text.SimpleDateFormat" %>
+<jsp:useBean id="userjoin" class="Test.userDB"/>
+ 
+ <%!
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+%>
+ <%
+	String id =(String)session.getAttribute("id");
+	user use = userjoin.getData(id);
+%>
 <!DOCTYPE HTML>
 <!--
 	Strongly Typed by HTML5 UP
@@ -35,14 +47,7 @@
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                           <li><a href="/MyPage/MyClass.jsp">
-                           <span>MY Page</span></a>
-                              <ul>
-                                 <li><a href="/MyPage/MyClass.jsp">My Class</a></li>
-                                 <li><a href="/MyPage/HobbyLog.jsp">활동로그</a></li>
-                                 <li><a href="/MyPage/Profile.jsp">내 프로필</a></li>
-                                 <li><a href="/MyPage/EditProfile.jsp">프로필수정</a></li>
-                              </ul>
+                          
                            <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
                            <span>Service Center</span></a>
                               <ul>
@@ -102,7 +107,7 @@
 									    <li>
 									        <div class="content">
 									            <h3>가입일</h3>
-									             <p>처음가입한 날짜는 2020/09/14입니다.</p>
+									             <p>처음가입한 날짜는<%=use.getReg_date() %>입니다.</p>
 									        </div>
 									        <div class="time">
 									        	<h4>2020-09-14</h4>

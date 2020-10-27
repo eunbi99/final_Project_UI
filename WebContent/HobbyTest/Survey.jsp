@@ -18,39 +18,50 @@
 	<div class="container">
 		<!-- Nav -->
 		<nav id="nav">
-		<ul>
-			<li><a class="fab fa-medium-m" href="Hobby/Music/Piano.jsp"><span>About Us</span></a></li>
-			<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>취미탐색</span></a>
-			<ul>
-				<li><a href="#">취미 검사</a></li>
-				<li><a href="/Hobby/mbti.jsp">MBTI</a></li>
-			</ul>
-			</li>
-			<li><a class="far fa-comments" href="/community/free_board.jsp"><span>커뮤니티</span></a>
-			<ul>
-				<li><a href="/community/free_board.jsp">자유게시판</a></li>
-				<li><a href="/community/info_board.jsp">정보게시판</a></li>
-			</ul>
-			</li>
-			<li><a class="fab fa-quora" href="/ServiceCenter/notice.jsp"><span>고객센터</span></a>
-			<ul>
-				<li><a href="/ServiceCenter/notice.jsp">공지사항</a></li>
-				<li><a href="/ServiceCenter/FAQ.jsp">FAQ</a></li>
-				<li><a href="/ServiceCenter/Q&A.jsp">Q&A</a></li>
-			</ul>
-			</li>
-		</ul>
-		<ul class="navtop">
-			<li><a href="/Join/LoginForm.jsp">Login</a></li>
-			<li><a href="/Join/insertForm.jsp">Join</a></li>
-			<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a>
-			<span></span></a>
-			</li>
-		</ul>
-		</nav>
-	</div>
-	</section>
+                        <ul class="mainnav">
+                        	<li><a href="/index.jsp"><span>About Us</span></a></li>
+                         	<li>
+                              <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
+                              <ul>
+                                 <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
+                                 <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
+                              </ul>
+                           </li>
+                         
+                           <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
+                           <span>Service Center</span></a>
+                              <ul>
+                                 <li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
+                                 <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">FAQ</a></li>
+                                 <li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="/community/infoboard/info_board.jsp">
+                              <span>community</span></a>
+                              <ul>
+                                 <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
+                                 <li><a href="/community/infoboard/info_board.jsp">정보게시판</a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                        <ul class="navtop"> 
+                        			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
+	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	
+                                	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
+                                	<%}else{%>       
+                                	<li><a href="/Join/LoginForm.jsp">Login</a></li>
+				                    <li><a href="/Join/insertForm.jsp">Join</a></li>
+				                    <%} %>
+                                            
+                        </ul>
+                     </nav>
 
+               </div>
+            </section>
 
 <main>
 <div class="container form">

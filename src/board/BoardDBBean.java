@@ -225,8 +225,7 @@ public class BoardDBBean {
 			pstmt.setInt(1, num);
 			pstmt.executeUpdate();
 
-            pstmt = conn.prepareStatement(
-            	"select * from board where num = ?");
+            pstmt = conn.prepareStatement("select * from board where num = ?");
             pstmt.setInt(1, num);
             rs = pstmt.executeQuery();
 
@@ -256,21 +255,30 @@ public class BoardDBBean {
     }
 	
     /////관리자페이지 게시글 목록전체 가져오기
-	public List<BoardDataBean> getAdminArticles(int start, int end, String searchOption, String keyword)
+	public List<BoardDataBean> getAdminArticles(int start, int end, String keyField, String keyword)
             throws Exception {
        Connection conn = null;
        PreparedStatement pstmt = null;
        ResultSet rs = null;
        List<BoardDataBean> adminArticle=null;
+       String sql="";
+       
        try {
            conn = getConnection();
+           if(!"".equals(keyField) ){
+           	sql ="select * from board where "+keyField+" like ?  order by ref desc, re_step asc limit ?,?"; 
+	            pstmt=conn.prepareStatement(sql);
+	            pstmt.setString(1,"%"+keyword+"%");
+	            pstmt.setInt(2, start-1);
+				pstmt.setInt(3, end);
            
-           pstmt = conn.prepareStatement(
-           	"select * from board  order by ref desc, re_step asc limit ?,? ");
-      
-           pstmt.setInt(1, start-1);
-			pstmt.setInt(2, end);
-           rs = pstmt.executeQuery();
+           }else{
+               sql="select * from board order by ref desc, re_step asc limit ?,? ";
+               pstmt=conn.prepareStatement(sql);
+               pstmt.setInt(1, start-1);
+   		    pstmt.setInt(2, end);
+           }
+	            rs = pstmt.executeQuery();
 
            if (rs.next()) {
         	   adminArticle = new ArrayList<BoardDataBean>(end);
