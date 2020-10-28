@@ -5,7 +5,7 @@
 
 <html>
 <head>
-   <title>ART_O1</title>
+   <title>ART_03</title>
    <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
    <link rel="stylesheet" href="../assets/css/Hobby.css">
@@ -136,16 +136,21 @@
 					공간감이 느껴지는 그림을 그릴 수 있아요.<br>
 					간직하고싶은 풍경을 그림으로 담을 수 있어요.<br>
 				</text>
-				<form method="post" action="/HobbyDtail/myClassPro.jsp" name="myClass">
-					<input type="submit" value="클래스 신청하기" id="submit" name="entryBtn" >
-					<input type="hidden" name="class_id" value="ART_03">
-					<input type="hidden" name="entry_yn" value="Y">
-				</form>
+				<% if(entry_yn!="Y"){%>
+					<form method="post" action="/HobbyDtail/myClassPro.jsp" name="myClass">
+						<input type="submit" value="클래스 신청하기" id="submit" name="entryBtn" >
+						<input type="hidden" name="class_id" value="ART_03">
+						<input type="hidden" name="entry_yn" value="Y">
+					</form>
+				<%}else{ %>
+
+					<input type="button" value="수강하기" id="playBtn" name="playBtn" >
+				<%}%>
 				<form method="post" action="/HobbyDtail/myClassPro.jsp" name="myClass">
 					<input type="submit" value="좋아요" id="submit" name="likeYnBtn" >
-					<input type="hidden" name="class_id" value="ART_03">
+					<input type="hidden" name="class_id" value="ART_01">
 					<input type="hidden" name="like_yn" value="Y">
-				</form>				
+				</form>	
 				</article>
 			</div>
          	</div>
@@ -159,21 +164,27 @@
          <script src="../assets/js/main.js"></script>
 
    </body>
-   <script>
+  <script>
 	   $(document).ready(function(){
 			var entry_yn = '<%=entry_yn%>';
+
 			if( entry_yn =='Y'){
+				$('#divEntry').hide();
 				var text = $('input[name=entryBtn]').val();
-				$('input[name=entryBtn]').val(' 수강하기');
+				$('input[name=entryBtn]').val('수강하기');
+				
 			}
-	
+
 			var like_yn = '<%=like_yn%>';
 			if( like_yn =='Y'){
 				var text = $('input[name=likeYnBtn]').val();
 				$('input[name=likeYnBtn]').val('좋아요 취소');
 			}
-	
-	   });
 
+	   });
+	   
+	   $('#playBtn').click( function() {
+		    window.open("https://www.youtube.com/watch?v=WSi9yG_9IBo", "유튜브", "width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes" );  
+	   } );
    </script>
 </html>

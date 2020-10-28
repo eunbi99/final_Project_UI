@@ -60,6 +60,7 @@ function checkValue(){
 	}
 
 }
+
 </script>
 
 </head>
@@ -185,21 +186,21 @@ function checkValue(){
 		</tr>	
 			
 		<tr>
-			<td>hobby</td>
+			<td>관심분야</td>
 		</tr>	
 		<tr>
 			<td>
 			
-				<input type="checkbox" id="ch1" name="hobby" value="댄스" checked>댄스
+				<input type="checkbox" id="ch1" name="hobby" value="예술" checked>예술
 				<label for="ch1"></label>
-				<input type="checkbox" id="ch2" name="hobby" value="요리">요리
+				<input type="checkbox" id="ch2" name="hobby" value="음악">음악
 				<label for="ch2"></label>
-				<input type="checkbox" id="ch3" name="hobby" value="독서">독서
+				<input type="checkbox" id="ch3" name="hobby" value="스포츠">스포츠
 				<label for="ch3"></label>
 			</td>
 		</tr>
 		<tr>
-			<td><input type="submit" value="가입하기" id="submit"></td>
+			<td><input type="submit" value="가입하기" id="submit" ></td>
 		</tr>	
 	</table>
 	</form>

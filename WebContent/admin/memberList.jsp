@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import = "Test.user" %>
 <%@ page import = "Test.userDB" %>
@@ -12,7 +12,7 @@
 %>
 
 <%
-	
+	request.setCharacterEncoding("utf-8");
 	String id=(String)session.getAttribute("id");
 	String pageNum = request.getParameter("pageNum");
 	if (pageNum == null) {
@@ -21,9 +21,12 @@
 	int currentPage = Integer.parseInt(pageNum);
 	int startRow = (currentPage - 1) * pageSize + 1;
 	int endRow = currentPage * pageSize;
+	int count=0;
 	int number = 0;
 	ArrayList<user> getMemberAll = null; 
+	
 	userDB userPro = userDB.getInstance();
+	count=userPro.getUserListCount();
 	
 	String keyField="";
 	String keyword="";
@@ -35,12 +38,12 @@
 			
 	ArrayList<user> memberList = userPro.getMemberAll(startRow, pageSize,keyField, keyword);
 	
-	int count = memberList.size();
-	
 	if(count >0){
 		memberList=userPro.getMemberAll(startRow,pageSize,keyField, keyword);
 	}
 		number = count-(currentPage-1)*pageSize;
+	
+	
 %>
 <html>
 <head>
@@ -102,6 +105,7 @@
 				  				<option value="" selected>전체</option>
 								<option value="id">아이디</option>
 								<option value="name">이름 </option>
+								<option value="address">주소</option>
 				  			</select>
 					  		<input type="text" id="keyword" name="keyword">
 					  		<input type="submit" value="검색">

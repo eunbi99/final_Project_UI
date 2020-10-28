@@ -95,7 +95,7 @@
     <footer>
      
       <p><input type="button" id="join" value="회원가입" onClick="location.href='../Join/insertForm.jsp'"></p>
-      <p><a href="index.jsp" title="Forgot Password" >비밀번호를 잊으셨나요?</a></p>
+   
     </footer>
         
     </section>

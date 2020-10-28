@@ -23,20 +23,25 @@
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <%
 	String id= (String)session.getAttribute("id");
-	String entryYn ="N";
+	String class_id=request.getParameter("class_id");	
+	String like_yn=request.getParameter("like_yn");
+
+//	String entryYn ="N";
+	
 	//가입한 클래스
 	Myclass myclass= new Myclass();
 	myclass.setId(id);
+	myclass.setClass_id(class_id);
 	myclass.setEntry_yn("Y");
 	ArrayList<Myclass> entryPro = MyclassBean.getInstance().getMyclass(myclass);
 
 	//좋아요한 클래스
-	Myclass myLikeClass= new Myclass();
-	myLikeClass.setLike_yn("Y");
-	ArrayList<Myclass> likePro = MyclassBean.getInstance().getMyclass(myLikeClass);
-	out.print(likePro.size());
+	Myclass myclass2= new Myclass();
+	myclass.setId(id);
+	myclass.setClass_id(class_id);
+	myclass.setLike_yn("Y");
+	ArrayList<Myclass> likePro = MyclassBean.getInstance().getMyclass(myclass);
 %>
-		
 		<script>
 		$(document).ready(function(){
 			$('.slider-wrap1,.slider-wrap2').slick({
@@ -145,7 +150,7 @@
 								<%
 									for (int i = 0; i < entryPro.size() ; i++) {
 								%>								
-									<div><a href="/HobbyDtail/<%=myclass.getClass_id()%>.jsp"><img src="<%=entryPro.get(i).getLink() %>" alt=""></a></div>
+									<div><a href="/HobbyDtail/<%=entryPro.get(i).getClass_id()%>.jsp?classId=<%=entryPro.get(i).getClass_id()%>"><img src="<%=entryPro.get(i).getLink() %>" alt=""></a></div>
 								<%
 									}
 								%>
@@ -159,7 +164,7 @@
 									if(	likePro.size() ==0){
 								%>										
 										<div class="slider-wrap1" style="text-align:center; margin:100px;">
-											<td >아직 좋아요한 클래스가 없습니다.</td>
+											<td>아직 좋아요한 클래스가 없습니다.</td>
 										</div>									
 								<% 
 									}else{
@@ -169,7 +174,7 @@
 								<%
 									for (int i = 0; i < likePro.size() ; i++) {
 								%>								
-									<div><a href=#><img src="<%=likePro.get(i).getLink() %>" alt=""></a></div>
+									<div><a href="/HobbyDtail/<%=likePro.get(i).getClass_id()%>.jsp?classId=<%=entryPro.get(i).getClass_id()%>"><img src="<%=likePro.get(i).getLink() %>" alt=""></a></div>
 								<%
 									}
 								%>

@@ -27,6 +27,7 @@ function boardCheck(){
 </head>
 <body>
 <%
+	String id=(String)session.getAttribute("id");
 	int num=0, ref=1, re_step=0, re_level=0;
 	String strV="";
 	
@@ -54,10 +55,11 @@ function boardCheck(){
    	<td colspan="2"> 글목록 </td>
    </tr>
    
-   <tr>
-   	<td width="70" align="center">이름 </td>
-   	<td> <input type="text" size="10" name="writer"></td>
-  </tr>
+ <tr>
+   	<td width="70" align="center">작성자 </td>
+   	<td><%=id %>
+   		<input type="hidden" size="40" maxlength="50" name="writer" value="<%=id %>">
+   	</td>
   
   <tr>
    	<td width="70" align="center"> 제목 </td>
@@ -80,8 +82,9 @@ function boardCheck(){
 
    <tr>
    	<td colspan="2"> <input type="submit" value="글쓰기">
-   	<input type="reset" value="다시작성">
-   	<input type="button" value="목록보기" onClick="window.location="/community/infoboard/info_board.jsp"> </td>
+	   	<input type="reset" value="다시작성">
+	   	<input type="button" value="목록보기" onclick="document.location.href='/community/infoboard/info_board.jsp'"> 
+	</td>
    	
   </tr>
  </table>

@@ -84,7 +84,7 @@ function boardCheck(){
    	<td colspan="2"> 
 	   	<input type="submit" value="글쓰기">
 	   	<input type="reset" value="다시작성">
-	   	<input type="button" value="목록보기" onClick="window.location="/ServiceCenter/Q&Aboard/Q&A.jsp"> 
+	   	<input type="button" value="목록보기" onclick="document.location.href='/ServiceCenter/Q&Aboard/Q&A.jsp'"> 
 	</td>
    	
   </tr>

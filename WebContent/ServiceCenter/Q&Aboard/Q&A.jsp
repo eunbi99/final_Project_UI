@@ -155,12 +155,12 @@
 			    	if(article.getRe_level()>0){
 			    		wid=5*(article.getRe_level());
 			    %>
-			    	<img src="/images/level-0000.jpg" width="<%=wid%>"height="16">
+			    	<img src="/images/level-0000.gif" width="<%=wid%>"height="16">
 			    	<img src="/images/re-0000.gif">
 			    	
 			    <% //원글이라면
 			    	}else{ %>
-			  		<img src="/images/level-0000.jpg" width="<%=wid%>"height="16">
+			  		<img src="/images/level-0000.gif" width="<%=wid%>"height="16">
 			  	<% } %>
 			  	
 			  	

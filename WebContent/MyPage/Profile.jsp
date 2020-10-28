@@ -120,13 +120,10 @@
                                        <p><%=use.getBirth() %></p>
                                     </div>
                                     <div class="data">
-                                       <h4>내클래스</h4>
-                                       <p>꽃꽃이 클래스,바리스타 클래스, 쿠킹 클래스</p>
+                                       <h4>관심 분야</h4>
+                                       <p><%=use.getHobby() %></p>
                                     </div>
-                                    <div class="data">
-                                       <h4>내용4</h4>
-                                       <p>내용</p>
-                                    </div>
+                                  
                               </div>
                         </div>
                   </div>

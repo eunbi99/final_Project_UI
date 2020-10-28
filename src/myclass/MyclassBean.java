@@ -82,6 +82,7 @@ public class MyclassBean {
 		    
 			boolean b = true;
 			try {
+				conn = getConnection();
 				String sql = "update myclass set like_yn =? where id=? and class_id=?";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, myclass.getLike_yn());
@@ -114,6 +115,7 @@ public class MyclassBean {
 	        
 	        try {
 	            	conn = getConnection();
+	            	
 	            	if(myclass.getClass_id()!=null) {
 		                sql="select * from myclass where id= ? and class_id=?";	
 		                pstmt=conn.prepareStatement(sql);
@@ -128,7 +130,7 @@ public class MyclassBean {
 		                pstmt=conn.prepareStatement(sql);
 		                pstmt.setString(1, myclass.getId());
 	            	}
-	                rs = pstmt.executeQuery();
+	            	rs = pstmt.executeQuery();
 
 	                while(rs.next()){
 						myclass = new Myclass();

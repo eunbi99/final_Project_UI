@@ -291,7 +291,32 @@ public class userDB {
 				return memberList;
 			}
 
+//회원목록 수
+		public int getUserListCount() throws Exception {
+	        Connection conn = null;
+	        PreparedStatement pstmt = null;
+	        ResultSet rs = null;
 
+	        int x=0;
+
+	        try {
+	            conn = getConnection();
+	            
+	            pstmt = conn.prepareStatement("select count(*) from user ");
+	            rs = pstmt.executeQuery();
+
+	            if (rs.next()) {
+	               x= rs.getInt(1);
+				}
+	        } catch(Exception ex) {
+	            ex.printStackTrace();
+	        } finally {
+	            if (rs != null) try { rs.close(); } catch(SQLException ex) {}
+	            if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+	            if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+	        }
+			return x;
+	    }
 
 					
 		}

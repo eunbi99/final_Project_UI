@@ -78,7 +78,7 @@ function boardCheck(){
    		<td colspan="2"> 
    			<input type="submit" value="글쓰기">
    			<input type="reset" value="다시작성">
-   			<input type="button" value="목록보기" onClick="window.location="/community/freeboard/free_board.jsp">
+   			<input type="button" value="목록보기" onclick="document.location.href='/community/freeboard/free_board.jsp'">
    		</td>
   </tr>
  </table>
