@@ -148,7 +148,7 @@
 				<%}%>
 				<form method="post" action="/HobbyDtail/myClassPro.jsp" name="myClass">
 					<input type="submit" value="좋아요" id="submit" name="likeYnBtn" >
-					<input type="hidden" name="class_id" value="ART_01">
+					<input type="hidden" name="class_id" value="ART_03">
 					<input type="hidden" name="like_yn" value="Y">
 				</form>	
 				</article>

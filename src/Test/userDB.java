@@ -146,8 +146,8 @@ public class userDB {
 		    
 			boolean b = true;
 			try {
+				conn = getConnection();
 				String sql = "update user set passwd=?,name=?, email=?,address=?, phone=?,birth=? where id=?";
-				conn = ds.getConnection();
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, bean.getPasswd());
 				pstmt.setString(2, bean.getName());
@@ -179,10 +179,8 @@ public class userDB {
 			boolean b = false;
 
 			try {
-
+				conn = getConnection();
 				String sql = "select id,passwd,name,email,address,phone,birth,hobby from user where id = ? and passwd = ?";
-
-				conn = ds.getConnection();
 
 				pstmt = conn.prepareStatement(sql);
 
