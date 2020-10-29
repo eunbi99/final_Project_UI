@@ -9,22 +9,7 @@
 <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 <link rel="stylesheet" href="../assets/css/main.css"/>
 <link rel="stylesheet" href="../assets/css/mbti.css">
-<script>
-function mbtiCheck(){
-	var result=document.getElementById('my_mbti').value;
-	
-	var msg="";
-	if(result=='INFP'){
-		msg = "당신에게 맞는 취미는 다꾸입니다.";
-	}else if(result=='INFP'){
-		msg = "당신에게 맞는 취미는 다꾸입니다.";
-	}else if(result=='INFP'){
-		msg = "당신에게 맞는 취미는 다꾸입니다.";
-	}
-	document.getElementById("mbtiMsg").innerHTML = msg;
-}
 
-</script>
 </head>
 
 <div class="homepage is-preload">
@@ -124,7 +109,7 @@ function mbtiCheck(){
                       </a>
                     </div>
                     <form action="" name="mbti">당신의 MBTI는?</p>
-                   		<input type="text" id="my_mbti" name="my_mbti" style=width:100%; placeholder="mbti를 입력해주세요">
+                   		<input type="text" id="my_mbti" name="my_mbti" style=width:100%; placeholder="MBTI를 대문자로 입력해주세요.">
                   		<input type="button" value="입력" onClick="mbtiCheck()"><br>
                   		<span id='mbtiMsg' value='test용'/>
 
@@ -235,7 +220,51 @@ function mbtiCheck(){
 <!-- partial -->
   <script  src="../assets/js/mbti.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script>
+function mbtiCheck(){
+	var result=document.getElementById('my_mbti').value;
+	
+	var msg="";
+	if(result=='INTJ'){
+		msg = "언어";
+	}else if(result=='INTP'){
+		msg = "예술";
+	}else if(result=='INFJ'){
+		msg = "DIY";
+	}else if(result=='INFP'){
+		msg = "예술";
+	}else if(result=='ISTJ'){
+		msg = "DIY";
+	}else if(result=='ISFJ'){
+		msg = "사진/영상";
+	}else if(result=='ISTP'){
+		msg = "요리";
+	}else if(result=='ISFP'){
+		msg = "예술";
+	}else if(result=='ENTJ'){
+		msg = "스포츠";
+	}else if(result=='ENTP'){
+		msg = "사진/영상";
+	}else if(result=='ENFJ'){
+		msg = "스포츠";
+	}else if(result=='ENFP'){
+		msg = "음악";
+	}else if(result=='ESTJ'){
+		msg = "언어";
+	}else if(result=='ESFJ'){
+		msg = "스포츠";
+	}else if(result=='ESTP'){
+		msg = "음악";
+	}else if(result=='ESFP'){
+		msg = "음악";
+	}else
+		msg1="정확한 MBTI를 입력해주세요.";
+	
+	document.getElementById("mbtiMsg").innerHTML = "당신에게 " +msg+" 관련된 취미를 추천해드립니다.";
+	document.getElementById("mbtiMsg").innerHTML = msg1;
+}
 
+</script>
 </div>
 	
 </body>
