@@ -49,13 +49,72 @@
 <head>
 	<title>회원목록</title>
 	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../assets/css/admin_member.css">
 </head>
-<body>		
-		
+<body>
+
+	<!-- Header -->
+            <section id="header">
+               <div class="container">
+
+                  <!-- Logo -->
+                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+
+                  <!-- Nav -->
+                     <nav id="nav">
+                        <ul>
+                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li>
+                              <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
+                              <ul>
+                                 <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
+                                 <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
+                              </ul>
+                           </li>
+                           
+                           <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
+                           <span>Service Center</span></a>
+                              <ul>
+                                 <li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
+                                 <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">FAQ</a></li>
+                                 <li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="/community/infoboard/info_board.jsp">
+                              <span>community</span></a>
+                              <ul>
+                                 <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
+                                 <li><a href="/community/infoboard/info_board.jsp">정보게시판</a></li>
+                              </ul>
+                           
+                           </li>
+                        </ul> 
+                                <ul class="navtop"> 
+                        			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
+	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	
+                                	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
+                                	<%}else{%>       
+                                	<li><a href="/Join/LoginForm.jsp">Login</a></li>
+				                    <li><a href="/Join/insertForm.jsp">Join</a></li>
+				                    <%} %>
+                                            
+                        </ul>
+                     </nav>
+
+               </div>
+            </section>
+            
+            
+        <!-- 게시판 -->    		
+		<div id="list">
 			<tr>
 				<td><%=id %>님 환영합니다.</td>
-				<td><a href="../admin/boardList.jsp" >전체 게시물</a></td>
-				<td><a href="../admin/memberList.jsp">회원 목록</a></td>
+				<td><a href="/admin/boardList.jsp" >전체 게시물</a></td>
+				<td><a href="/admin/memberList.jsp">회원 목록</a></td>
 				<td><a href="../index.jsp">메인으로</a></td>
 			</tr>
 		 	<p align="center">회원목록(전체 회원수:<%=count%>)</p>
@@ -115,6 +174,7 @@
 				  	</table>
 			  	</div>
 			</form>	
+			</div>
 			
 			<div style="text-align:center">
 			<%

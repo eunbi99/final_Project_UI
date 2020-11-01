@@ -25,18 +25,18 @@ public class userDB {
 	}
 	
 
-    private Connection getConnection() throws Exception {
-    	Connection conn=null;
-    	PreparedStatement pstmt=null;
-    	
-    	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
-    	String jdbc_url  = "jdbc:mysql://localhost:3306/bdbjsp?characterEncoding=UTF-8&serverTimezone=UTC";
-    	
-    	
-    		try {
-    			Class.forName(jdbc_driver);
-    			conn=DriverManager.getConnection(jdbc_url,"root","1234");
-    			
+	 private Connection getConnection() throws Exception {
+	    	Connection conn=null;
+	    	PreparedStatement pstmt=null;
+	    	
+	    	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
+	    	String jdbc_url  = "jdbc:mysql://localhost/qwwa79?characterEncoding=UTF-8&serverTimezone=UTC";
+	    	
+	    	
+	    		try {
+	    			Class.forName(jdbc_driver);
+	    			conn=DriverManager.getConnection(jdbc_url,"qwwa79","kimju853!");
+	    			
     		} catch (Exception e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();
@@ -218,7 +218,10 @@ public class userDB {
 
 		//회원 탈퇴 - 탈퇴하기
 		public boolean deleteData(String id){
-			boolean b = true;
+			 Connection conn = null;
+		     PreparedStatement pstmt = null;
+		     ResultSet rs= null;
+			boolean b= false;
 			try {
 				String sql = "delete from user where id = ?";
 				conn = ds.getConnection();

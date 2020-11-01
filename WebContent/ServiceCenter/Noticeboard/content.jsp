@@ -4,13 +4,6 @@
 <%@ page import = "board.BoardDataBean" %>
 <%@ page import = "java.text.SimpleDateFormat" %>
 
-
-<html>
-<head>
-<title>게시판</title>
-
-</head>
-<body>
 <%
 
    int num = Integer.parseInt(request.getParameter("num")); 
@@ -28,10 +21,89 @@
    int re_step=article.getRe_step();
    int re_level=article.getRe_level();
 %>
-<center><b>글내용 보기</b>
+
+<html>
+<head>
+<title>게시판</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/content.css">
+</head>
+<body class="homepage is-preload">
+		<div id="page-wrapper">
+<!-- Header -->
+            <section id="header">
+               <div class="container">
+
+                  <!-- Nav -->
+                     <nav id="nav">
+                        <ul>
+                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li>
+                              <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
+                              <ul>
+                                 <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
+                                 <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
+                              </ul>
+                           </li>
+                           
+                           <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
+                           <span>Service Center</span></a>
+                              <ul>
+                                 <li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
+                                 <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">FAQ</a></li>
+                                 <li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="/community/infoboard/info_board.jsp">
+                              <span>community</span></a>
+                              <ul>
+                                 <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
+                                 <li><a href="/community/infoboard/info_board.jsp">정보게시판</a></li>
+                              </ul>
+                           
+                           </li>
+                        </ul> 
+                                <ul class="navtop"> 
+                        			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
+	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	
+                                	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
+                                	<%}else{%>       
+                                	<li><a href="/Join/LoginForm.jsp">Login</a></li>
+				                    <li><a href="/Join/insertForm.jsp">Join</a></li>
+				                    <%} %>
+                                            
+                        </ul>
+                     </nav>
+			
+                  <!-- Logo -->
+                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+			
+               </div>
+            </section>
+		<div id="my-Sidebar">
+        	<h2>고객센터</h2>
+        		<ul>
+         		  	<li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
+        		  	<li><a href="/ServiceCenter/FAQboard/FAQ.jsp">FAQ</a></li>
+         	  	 	<li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
+        		</ul>
+      		</div>	
+      		
+      		<!-- content -->
+<section id="main"> 
+			<div class="container">
+		 		<div id="content">
+		 		
+
+
+<center><b>글내용 보기</b></center>
 <br>
 <form>
-<table width="500" border="1" cellspacing="0" cellpadding="0" align="center">  
+<table width="500" border="1" cellspacing="0" cellpadding="0" align="center" >  
   <tr height="30">
     <td align="center" width="125">글번호</td>
     <td align="center" width="125" align="center">
@@ -56,9 +128,13 @@
   </tr>
   <tr>
     <td align="center" width="125">글내용</td>
-    <td align="left" width="375" colspan="3"><pre><%=article.getContent()%></pre></td>
+    <td align="center" width="375" align="center" colspan="3"></td>
   </tr>
   
+  <tr>
+    
+    <td align="left" width="375"  height="300" colspan="4"><pre><%=article.getContent()%></pre></td>
+  </tr>
   <tr height="30">      
   
     <td colspan="4" align="right" > 
@@ -81,6 +157,9 @@
 <%
  }catch(Exception e){} 
  %>
-</form>      
+</form>   
+</div>
+</div>
+</section>   
 </body>
 </html>

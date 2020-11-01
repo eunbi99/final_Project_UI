@@ -1,24 +1,62 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%	request.setCharacterEncoding("utf-8"); %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@page import="Test.user"%>
 <jsp:useBean id="userjoin" class="Test.userDB"/>
+ <jsp:useBean id="bean" class="Test.user"/>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+   String id = (String)request.getParameter("id");
+   String passwd = (String)request.getParameter("passwd");
+   boolean deleteConfirm = userjoin.deleteConfirm(id, passwd);
+   if(deleteConfirm){
+
+%>
+
+      <script type="text/javascript">
+
+         var confirmResult = confirm("Á¤¸» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?");
+
+         if(confirmResult == true){
+
+            var deleteId = "<%=id%>";
+
+            post_to_url("/Join/DeletePro.jsp",{'id':deleteId});
+
+         } else {
+
+            history.back();
+
+         }
+
+      
+
+      </script>
 
 <%
-	String id = (String)request.getParameter("id");
-	boolean b = userjoin.deleteData(id);
-	if(b){
-		session.removeAttribute("id");
-%>
-		<script>
-			alert("íƒˆí‡´ ì„±ê³µ");
-			location.href = "/index.jsp";
-		</script>	
 
-<% } else { %>
-		<script>
-			alert("íƒˆí‡´ ì‹¤íŒ¨!\nê´€ë¦¬ìì— ë¬¸ì˜ë°”ëŒ");
-			history.back();
-		</script>	
+   } else {
+
+%>
+
+      <script>
+
+         alert("ºñ¹Ğ¹øÈ£°¡ Æ²¸³´Ï´Ù!");
+
+         history.back();
+
+      </script>   
 
 <%
-	}
+
+   }
+
 %>
+
+</body>
+</html>

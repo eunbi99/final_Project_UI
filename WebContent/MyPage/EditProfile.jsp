@@ -13,33 +13,30 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main1.css" />
+		
 		<link rel="stylesheet" href="../assets/css/MyPage.css" />
 	
 
 	</head>
-	<body class="no-sidebar is-preload">
+	<body class="homepage is-preload" style="overflow-x:hidden">
 		<div id="page-wrapper">
-
-			<!-- Header -->
-          <section id="header">
+<!-- Header -->
+            <section id="header">
                <div class="container">
 
-                  <!-- Logo-->
-                  <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
                   
                   <!-- Nav -->
                      <nav id="nav">
-                        <ul class="mainnav">
-                        	<li><a href="/index.jsp"><span>About Us</span></a></li>
-                         	<li>
+                        <ul>
+                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
-                                 <li><a href="/HobbyTest/mbti.jsp">취미 검사</a></li>
+                                 <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                          
+                           
                            <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
                            <span>Service Center</span></a>
                               <ul>
@@ -54,15 +51,16 @@
                                  <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
                                  <li><a href="/community/infoboard/info_board.jsp">정보게시판</a></li>
                               </ul>
+                           
                            </li>
-                        </ul>
-                        <ul class="navtop"> 
+                        </ul> 
+                                <ul class="navtop"> 
                         			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
-	                                	<li><a href="/Join/Logout.jsp">Logout</a></li>
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
 	                                	
                                 	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
-	                                	<li><a href="/Join/Logout.jsp">Logout</a></li>
+	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
 	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
                                 	<%}else{%>       
                                 	<li><a href="/Join/LoginForm.jsp">Login</a></li>
@@ -71,10 +69,12 @@
                                             
                         </ul>
                      </nav>
-
+			<!-- Logo -->
+                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
                </div>
             </section>
-				
+            
+            
 			<!-- 사이드 바 -->
 			<div id="my-Sidebar">
         		<h2>마이페이지</h2>
@@ -205,16 +205,14 @@
 								                </td>
 								            </tr>
 								                   
-								            <tr>
-								                <td align="center"><b>관심분야</b>
-								                <td colspan = "7" >
-								                    <input type="radio" name="관심분야" value="운동" checked>운동
-								                    <input type="radio" name="관심분야" value="요리" checked>요리
-								                    <input type="radio" name="관심분야" value="여행" checked>여행
-								                    <input type="radio" name="관심분야" value="영화감상" checked>영화감상
-								                    <input type="radio" name="관심분야" value="음악감상" checked>음악감상
-								                </td>
-								            </tr>
+								               <tr>
+			                                        <td align="center"><b>관심분야</b>
+			                                        <td colspan = "7" >
+				                                       <input type="checkbox" id="ch1" name="hobby" value="예술" checked>예술
+				                                       <input type="checkbox" id="ch2" name="hobby" value="음악">음악
+				                                       <input type="checkbox" id="ch3" name="hobby" value="스포츠">스포츠
+                                       				 </td>
+                                    		 </tr>
         					</table>
         					</form>
         								<input type="submit" id="delete" value="회원탈퇴" 

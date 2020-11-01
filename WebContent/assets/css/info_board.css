@@ -2,11 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
 
 
-
-@import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
-
-
 #my-Sidebar {
 		
         width: 250px;
@@ -30,7 +25,14 @@
  }
 
 
+#list{
+	margin:5em;
+}
 
+#content {
+	margin-left:1em;
+	margin-top:-1em;
+}
 
 table tr th {
 	text-align: center;
@@ -82,7 +84,7 @@ table tbody td ul li {
 		font-size: 0.85em;
 		letter-spacing: 2px;
 		padding:  0.6em 1.5em;
-		margin:0 0 3em 70em;
+		margin:0 0 3em 0em;
 		
 	}
 
@@ -1790,7 +1792,7 @@ input, select, textarea {
 
 /* Form */
 
-	form label {
+/*	form label {
 		font-weight: 600;
 		text-transform: uppercase;
 		color: #888;
@@ -1811,7 +1813,7 @@ input, select, textarea {
 		display: block;
 		border: 0;
 		background: #e8e8e8;
-		width: 100%;
+		width: 50%;
 		box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
 		line-height: 1.25em;
@@ -1850,7 +1852,7 @@ input, select, textarea {
 	form ::-moz-focus-inner {
 		border: 0;
 	}
-
+*/
 /* Table */
 
 	table {
@@ -1975,8 +1977,8 @@ input, select, textarea {
 		font-size: 1.5em;
 		letter-spacing: 8px;
 	  	position: absolute;
-	  	margin: 0 0 0 5em;
-	  	padding: 1em 0 5em 0;
+	  	margin: 0em 0 0 1em;
+	  	padding: 0em 0 0em 0;
 	  	cursor: default;
        /* top: -500px;
         left:50px;
@@ -2035,7 +2037,7 @@ input, select, textarea {
 
 		#nav > ul > li {
 			display: inline-block;
-			padding-right: 2em;
+			padding-right: 3em;
             
 		}
 
@@ -2166,15 +2168,18 @@ input, select, textarea {
 				color: #ed786a;
 			}
 
-        .navtop{
-            position: absolute;
-            top:-50px;
-            left:450px;
-            width: 100%;
-            cursor: default;
-            font-size: 0.8em;
-    
-        }
+    .navtop {
+    position: absolute;
+    top: -50px;
+    left: 450px;
+    right: 0px;
+    width: 100%;
+    cursor: default;
+    font-size: 0.8em;
+    display:block;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /*Category*/   
 

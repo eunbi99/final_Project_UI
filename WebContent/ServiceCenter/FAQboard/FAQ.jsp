@@ -3,35 +3,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MY HOB!</title>
+	<title>MY HOB! Q&A게시판</title>
 	<meta charset="utf-8" />
   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="/assets/css/main2.css"/>
-	<link rel="stylesheet" href="/assets/css/FAQ.css">
+	
+	<link rel="stylesheet" href="/assets/css/free_board.css">
 </head>
-
 <body class="homepage is-preload">
 		<div id="page-wrapper">
-
-			<!-- Header -->
+<!-- Header -->
             <section id="header">
                <div class="container">
 
-                  <!-- Logo-->
-                  <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
-                  
                   <!-- Nav -->
                      <nav id="nav">
-                        <ul class="mainnav">
-                        	<li><a href="/index.jsp"><span>About Us</span></a></li>
-                         	<li>
+                        <ul>
+                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
-                                 <li><a href="/HobbyTest/mbti.jsp">취미 검사</a></li>
+                                 <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                       
+                           
                            <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
                            <span>Service Center</span></a>
                               <ul>
@@ -46,9 +41,10 @@
                                  <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
                                  <li><a href="/community/infoboard/info_board.jsp">정보게시판</a></li>
                               </ul>
+                           
                            </li>
-                        </ul>
-                        <ul class="navtop"> 
+                        </ul> 
+                                <ul class="navtop"> 
                         			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
 	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
@@ -64,9 +60,13 @@
                         </ul>
                      </nav>
 
+					
+                  <!-- Logo -->
+                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+					
                </div>
             </section>
-			<div id="my-Sidebar">
+ 		<div id="my-Sidebar">
         	<h2>고객센터</h2>
         		<ul>
          		  	<li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
@@ -75,10 +75,12 @@
         		</ul>
       		</div>	
       		
-    <!-- FAQ -->	
-	  <section id="main"> 
-		<div class="container">
-  			<h2>자주 묻는 질문</h2>
+      		<!-- Q&A -->
+      	<section id="main"> 
+			<div class="container">
+		 		<div id="content">
+		 		<h2>FAQ</h2>
+		 	
 	  <div class="accordion">
 	    <div class="accordion-item">
       <button id="accordion-button-1" aria-expanded="false">
@@ -129,6 +131,7 @@
     </div>
   </div>
 </div>
+
 				
 		<!-- Scripts -->
 			<script  src="../assets/js/jquery.min.js"></script>
@@ -138,5 +141,9 @@
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
 			<script src="../assets/js/FAQ.js"></script>
-	</body>
+			
+</div>
+</section>
+</div>
+</body>
 </html>

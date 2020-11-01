@@ -15,29 +15,18 @@
             <section id="header">
                <div class="container">
 
-                  <!-- Logo-->
-                  <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
-                  
-                  <!-- Nav -->
+                  <!-- Nav 진짜마지막 -->
                      <nav id="nav">
                         <ul class="mainnav">
                         	<li><a href="/index.jsp"><span>About Us</span></a></li>
                          	<li>
-                              <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
+                              <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
-                                 <li><a href="/HobbyTest/mbti.jsp">취미 검사</a></li>
+                                 <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                           <li><a href="/MyPage/MyClass.jsp">
-                           <span>MY Page</span></a>
-                              <ul>
-                                 <li><a href="/MyPage/MyClass.jsp">My Class</a></li>
-                                 <li><a href="/MyPage/HobbyLog.jsp">활동로그</a></li>
-                                 <li><a href="/MyPage/Profile.jsp">내 프로필</a></li>
-                                 <li><a href="/MyPage/EditProfile.jsp">프로필수정</a></li>
-                              </ul>
-                           <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
+                           <li><a href="/ServiceCenter/Noticeboard/notice.jsp">
                            <span>Service Center</span></a>
                               <ul>
                                  <li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
@@ -45,7 +34,7 @@
                                  <li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
                               </ul>
                            </li>
-                           <li><a href="/community/infoboard/info_board.jsp">
+                           <li><a href="/community/freeboard/free_board.jsp">
                               <span>community</span></a>
                               <ul>
                                  <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
@@ -68,7 +57,9 @@
                                             
                         </ul>
                      </nav>
-
+                     
+                      <!-- Logo-->
+                  <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
                </div>
             </section>
    
@@ -90,68 +81,40 @@
              <div class="row">
                  <div class="column">
                    <div class="card">
-                      <a href="/HobbyDtail/ART_01.jsp?classId=ART_01" class="image featured"><img src="/assets/css/images/ART_01.jpg" alt="" /></a>
-                      <header>
-                        <h3>공간감을 살리는 스케치 스킬</h3>
-                     </header>
-                            <p>월 57,000원 (6개월)</p>
-                   </div>
-                 </div>
-                 <div class="column">
-                   <div class="card">
-                      <a href="/HobbyDtail/ART_02.jsp?classId=ART_02" class="image featured"><img src="/assets/css/images/Art_02.jpg" alt="" /></a>
-                      <header>
-                        <h3>손으로만 그림 그리기 지겹다면? 그래픽 일러스트</h3>
-                     </header>
-                            <p>월 47,000원 (6개월)</p>
-                   </div>
-                 </div>
-                 <div class="column">
-                   <div class="card">
-                      <a href="/HobbyDtail/ART_03.jsp?classId=ART_03" class="image featured"><img src="/assets/css/images/ART_03.jpg" alt="" /></a>
+                      <a href="/HobbyDetail/ART_01.jsp?classId=ART_01" class="image featured"><img src="/assets/css/images/ART_01.jpg" alt="" /></a>
                       <header>
                         <h3>섬세한 터치로 완성하는 꽃 드로잉</h3>
                      </header>
+                            <p>월 45,000원 (6개월)</p>
+                   </div>
+                 </div>
+                 <div class="column">
+                   <div class="card">
+                      <a href="/HobbyDetail/ART_02.jsp?classId=ART_02" class="image featured"><img src="/assets/css/images/ART_02.jpg" alt="" /></a>
+                      <header>
+                        <h3>초보자를 위한 손그림 A to Z</h3>
+                     </header>
+                            <p>월 39,000원 (6개월)</p>
+                   </div>
+                 </div>
+                 <div class="column">
+                   <div class="card">
+                      <a href="/HobbyDetail/ART_03.jsp?classId=ART_03" class="image featured"><img src="/assets/css/images/ART_03.jpg" alt="" /></a>
+                      <header>
+                        <h3>칠하고 문지르면 끝? 파스텔의 매력에 빠져봐요!</h3>
+                     </header>
                             <p>월 57,000원 (6개월)</p>
                    </div>
                  </div>
                  <div class="column">
                    <div class="card">
-                      <a href="#" class="image featured"><img src="/assets/css/images/Art4.jpg" alt="" /></a>
+                      <a href="/HobbyDetail/ART_04.jsp?classId=ART_04" class="image featured"><img src="/assets/css/images/ART_04.jpg" alt="" /></a>
                       <header>
-                        <h3>다양한 색으로 과감하게 칠하는 유화 페인팅</h3>
+                        <h3>공간감을 살리는 스케치 스킬</h3>
                      </header>
                             <p>월 59,000원 (6개월)</p>
                    </div>
                  </div>
-                 <div class="column">
-                   <div class="card">
-                      <a href="#" class="image featured"><img src="/assets/css/images/Art5.jpg" alt="" /></a>
-                      <header>
-                        <h3>색연필로 사각사각 그림 그려요!</h3>
-                     </header>
-                            <p>월 48,000원 (6개월)</p>
-                   </div>
-                 </div>
-                 <div class="column">
-                   <div class="card">
-                      <a href="#" class="image featured"><img src="/assets/css/images/Art6.jpg" alt="" /></a>
-                      <header>
-                        <h3>문지르면 끝일까? 처음 만나는 파스텔</h3>
-                     </header>
-                            <p>월 52,000원 (6개월)</p>
-                   </div>
-                 </div>
-                 <div class="column">
-                   <div class="card">
-                      <a href="#" class="image featured"><img src="/assets/css/images/Art7.jpg" alt="" /></a>
-                      <header>
-                        <h3>일상을 기록하는 아기자기 일러스트</h3>
-                     </header>
-                            <p>월 46,000원 (6개월)</p>
-                   </div>
-                 </div>
-                 
             </div>
                           </div>
                            </section>

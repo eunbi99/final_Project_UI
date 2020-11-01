@@ -7,7 +7,7 @@
 <title>MBTI</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-<link rel="stylesheet" href="../assets/css/main.css"/>
+
 <link rel="stylesheet" href="../assets/css/mbti.css">
 
 </head>
@@ -75,7 +75,7 @@
         	<h2>취미탐색</h2>
         		<ul>
          		  	<li><a href="/HobbyTest/Survey.jsp" >취미 검사</a></li>
-        		  	<li><a href="/community/info_board.jsp" >MBTI</a></li>
+        		  	<li><a href="/HobbyTest/mbti.jsp" >MBTI</a></li>
         		</ul>
       	</div>
       	
@@ -263,7 +263,6 @@ function mbtiCheck(){
 	document.getElementById("mbtiMsg").innerHTML = "당신에게 " +msg+" 관련된 취미를 추천해드립니다.";
 	document.getElementById("mbtiMsg").innerHTML = msg1;
 }
-
 </script>
 </div>
 	

@@ -1,5 +1,3 @@
-/*Áö¾ðÀÌ²¨*/
-
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
 
@@ -8,6 +6,10 @@
         padding: 20px;
         margin-bottom: 20px;
         float: left;
+        background-color: #e5e5e5;
+        border:solid 1px gray;
+        height:700px; 
+        margin-top:90px; 
       }
  
  * { 
@@ -140,7 +142,7 @@ input, select, textarea {
 	}
 
 	*, *:before, *:after {
-		box-sizing: inherit;
+		/*box-sizing: inherit;*/
 	}
 
 	body {
@@ -188,8 +190,8 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1em;
-		letter-spacing: 2px;
-		margin: 0 0 1.25em 0;
+		/*letter-spacing: 2px;*/
+		margin: 0 0 0.5em 0;
 	}
 
 	a {
@@ -1547,7 +1549,8 @@ input, select, textarea {
 		-ms-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 		display: inline-block;
-		border: solid 6px #ebebeb !important;
+		border-radius: 10em;
+		/*border: solid 6px #ebebeb !important;*/
 	}
 
 		.image:hover {
@@ -1556,7 +1559,10 @@ input, select, textarea {
 
 		.image img {
 			display: block;
-			width: 100%;
+			/*width: 100%;*/
+			width: 350px;
+			higjt: 300px;
+			object-fit: fill;
 		}
 
 		.image.fit {
@@ -1567,7 +1573,7 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width:100%;            
-			margin: 0 0 3.5em 0;
+			margin: 0 0 1em 0;
 		}
 
 		.image.left {
@@ -1590,7 +1596,6 @@ input, select, textarea {
 /* List */
 
 	ul {
-		list-style: disc;
 		padding-left: 1em;
 	}
 

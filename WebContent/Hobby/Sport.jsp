@@ -15,29 +15,18 @@
             <section id="header">
                <div class="container">
 
-                  <!-- Logo -->
-                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
-
-                  <!-- Nav -->
+                  <!-- Nav 진짜마지막 -->
                      <nav id="nav">
-                        <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
-                           <li>
-                              <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
+                        <ul class="mainnav">
+                        	<li><a href="/index.jsp"><span>About Us</span></a></li>
+                         	<li>
+                              <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
-                                 <li><a href="/HobbyTest/mbti.jsp">취미 검사</a></li>
+                                 <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                           <li><a href="/MyPage/MyClass.jsp">
-                           <span>MY Page</span></a>
-                              <ul>
-                                 <li><a href="/MyPage/MyClass.jsp">My Class</a></li>
-                                 <li><a href="/MyPage/HobbyLog.jsp">활동로그</a></li>
-                                 <li><a href="/MyPage/Profile.jsp">내 프로필</a></li>
-                                 <li><a href="/MyPage/EditProfile.jsp">프로필수정</a></li>
-                              </ul>
-                           <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
+                           <li><a href="/ServiceCenter/Noticeboard/notice.jsp">
                            <span>Service Center</span></a>
                               <ul>
                                  <li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
@@ -45,18 +34,20 @@
                                  <li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
                               </ul>
                            </li>
-                           <li><a href="/community/infoboard/info_board.jsp">
+                           <li><a href="/community/freeboard/free_board.jsp">
                               <span>community</span></a>
                               <ul>
                                  <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
                                  <li><a href="/community/infoboard/info_board.jsp">정보게시판</a></li>
                               </ul>
-                           <ul class="navtop"> 
-                        			<%if("admin".equals(session.getAttribute("id"))){ %> 
+                           </li>
+                        </ul>
+                        <ul class="navtop"> 
+                        			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
 	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
 	                                	
-                                	<%}else if(session.getAttribute("id")!=null){ %>     
+                                	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
 	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
 	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
                                 	<%}else{%>       
@@ -65,10 +56,10 @@
 				                    <%} %>
                                             
                         </ul>
-                           </li>
-                        </ul>
                      </nav>
-
+                     
+                      <!-- Logo-->
+                  <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
                </div>
             </section>
             
@@ -80,7 +71,7 @@
                    <li><a href="DIY.jsp" >DIY</a></li>
                    <li><a href="Language.jsp" >Language</a></li>
                    <li><a href="Music.jsp" >Music</a></li>
-                   <li><a href="PhotoNVidoe.jsp" >Photo & Video</a></li>
+                   <li><a href="PhotoNVideo.jsp" >Photo & Video</a></li>
                    <li><a href="Sport.jsp" >Sport</a></li>
               </ul>
          </div>
@@ -90,29 +81,31 @@
              <div class="row">
                  <div class="column">
                    <div class="card">
-                      <a href="#" class="image featured"><img src="../assets/css/images/Sport1.jpg" alt="" /></a>
+                      <a href="/HobbyDetail/SPORTS_01.jsp?classId=SPORTS_01" class="image featured"><img src="/assets/css/images/SPORTS_01.jpg" alt="" /></a>
                       <header>
-                        <h3>축구, 아직도 관람만 하시나요?</h3>
+                        <h3>요가로 몸과 마음 바로잡기</h3>
                      </header>
                             <p>월 53,000원 (6개월)</p>
                    </div>
                  </div>
                  <div class="column">
                    <div class="card">
-                      <a href="#" class="image featured"><img src="../assets/css/images/Sport2.jpg" alt="" /></a>
+                      <a href="/HobbyDetail/SPORTS_02.jsp?classId=SPORTS_02" class="image featured"><img src="/assets/css/images/SPORTS_02.jpg" alt="" /></a>
                       <header>
-                        <h3>집에서도 가능한 요가 스트레칭</h3>
+                        <h3>운동에도 유행이 있다! 필라테스로 트렌드에 맞는 운동을 즐겨요</h3>
                      </header>
                             <p>월 38,000원 (6개월)</p>
                    </div>
                  </div>
                  <div class="column">
                    <div class="card">
-                      <a href="#" class="image featured"><img src="../assets/css/images/Sport3.jpg" alt="" /></a>
+                      <a href="/HobbyDetail/SPORTS_03.jsp?classId=SPORTS_03" class="image featured"><img src="/assets/css/images/SPORTS_03.jpg" alt="" /></a>
                       <header>
-                        <h3>테니스로 재미있게 체력 기르기</h3>
+                        <h3>근력과 체력 향상을 위한 헬스</h3>
                      </header>
                             <p>월 42,000원 (6개월)</p>
+                   </div>
+                 </div>
                    </div>
                  </div>
             </div>
