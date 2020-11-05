@@ -26,13 +26,12 @@ public class BoardDBBean {
     	PreparedStatement pstmt=null;
     	
     	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
-    	String jdbc_url  = "jdbc:mysql://localhost/qwwa79?characterEncoding=UTF-8&serverTimezone=UTC";
+    	String jdbc_url  = "jdbc:mysql://localhost:3306/bdbjsp?characterEncoding=UTF-8&serverTimezone=UTC";
     	
     	
     		try {
     			Class.forName(jdbc_driver);
-    			conn=DriverManager.getConnection(jdbc_url,"qwwa79","kimju853!");
-    			
+    			conn=DriverManager.getConnection(jdbc_url,"root","1234");
     		} catch (Exception e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();
@@ -109,16 +108,6 @@ public class BoardDBBean {
             if (conn != null) try { conn.close(); } catch(SQLException ex) {}
         }
     }
-    
-    private PreparedStatement setString(int i, Object boardType) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private Object getBoardType() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	//board테이블에 저장된 전체글의 수를 얻어냄.(select문)<=list.jsp에서 사용.
 	public int getArticleCount(String boardType) throws Exception {
