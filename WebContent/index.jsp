@@ -18,8 +18,7 @@
             <section id="header">
                <div class="container">
 
-                  <!-- Logo -->
-                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+                 
 
                   <!-- Nav -->
                      <nav id="nav">
@@ -65,7 +64,8 @@
                                             
                         </ul>
                      </nav>
-
+ 				<!-- Logo -->
+                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
                </div>
             </section>
 	
@@ -79,15 +79,15 @@
 			<p class="slide-desc">
 				휴양지 여행처럼 즐거운 지언이의 수채화 클래스<br>
 				<br>
-				<a class="button" href="#">view more</a>
+				<a class="button" href="/Hobby/Art.jsp">view more</a>
 			</p>
 		</div>
 		<div class="slide">
-			<h2 class="slide-title">Extreme sports</h2>
+			<h2 class="slide-title">Photography Basics</h2>
 			<p class="slide-desc">
-				'BMX' 배우면서 스피드와 스릴을 만끽해보자!<br>
+				'DSLR' Camera Basics Tutorial! <br>
 				<br>
-				<a class="button" href="#">view more</a>
+				<a class="button" href="/HobbyDetail/PNV_03.jsp">view more</a>
 			</p>
 		</div>
 		<div class="slide">
@@ -95,7 +95,7 @@
 			<p class="slide-desc">
 				테이블 가득 달달함을 나누어봐요<br>
 				<br>
-				<a class="button" href="#">view more</a>
+				<a class="button" href="/HobbyDetail/COOK_01.jsp">view more</a>
 			</p>
 		</div>
 		<button class="arrow prev"><</button>
@@ -132,32 +132,31 @@
 			<div class="col-4 col-6-medium col-12-small">
 				<!-- Feature -->
 				<section>
-				<a href="#" class="image featured"><img src="images/diy.jpg" alt=""/></a>
+				<a href="/HobbyDetail/DIY_01.jsp" class="image featured"><img src="images/knittning.jpg" alt=""/></a>
 				<header>
-				<h3>나만의 다이어리 꾸미기</h3>
+				<h3> knittning </h3>
 				</header>
 				<p>
-					다꾸, 이제는 <a href="#">키트</a>로 구매하세요!
+					니트,목도리,장갑  <a href="#">뜨개질 강의</a>로 만나보세요!
 				</p>
 				</section>
 			</div>
 			<div class="col-4 col-6-medium col-12-small">
 				<!-- Feature -->
 				<section>
-				<a href="#" class="image featured"><img src="images/coding.jpg" alt=""/></a>
+				<a href="/HobbyDetail/SPORTS_01.jsp" class="image featured"><img src="images/sports.jpg" alt=""/></a>
 				<header>
-				<h3>코딩 쉽게 배우자</h3>
+				<h3>홈 트레이닝</h3>
 				</header>
 				<p>
-					현직자에게 배우는 실무 코딩<br>
-					기초부터 스킬까지!
+					집에서 하는 간단한 운동 루틴!
 				</p>
 				</section>
 			</div>
 			<div class="col-4 col-6-medium col-12-small">
 				<!-- Feature -->
 				<section>
-				<a href="#" class="image featured"><img src="images/coding.jpg" alt=""/></a>
+				<a href="/HobbyDetail/MUSIC_03.jsp" class="image featured"><img src="images/Piano.jpg" alt=""/></a>
 				<header>
 				<h3>재즈 피아노</h3>
 				</header>
@@ -168,7 +167,7 @@
 			</div>
 			<div class="col-12">
 				<ul class="actions">
-					<li><a href="#" class="button icon solid fa-file">Tell Me More</a></li>
+					<li><a href="/Hobby/Art.jsp" class="button icon solid fa-file">Tell Me More</a></li>
 				</ul>
 			</div>
 		</div>
@@ -195,7 +194,7 @@
 				<br>
 				<h3>일상을 음악으로 채색해봐요, 함께 배우는 어쿠스틱 기타</h3>
 				<ul class="actions">
-					<li><a href="#" class="button icon solid fa-file">수강신청</a></li>
+					<li><a href="/HobbyDetail/MUSIC_01.jsp" class="button icon solid fa-file">수강신청</a></li>
 				</ul>
 				</article>
 				<!-- Post -->
@@ -206,13 +205,14 @@
 				
 				<a href="#" class="">
 				<!--class="image featured">-->
-				<iframe width="100%" height="315" src="https://www.youtube.com/embed/UhC2sbXpXkI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/qaUlImOLBlo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 				</iframe>
+				
 				</a><br>
 				<br>
-				<h3>왕초보를 위한 칼람바 연주 1탄!</h3>
+				<h3>왕초보를 위한 바이올린 연주 1탄!</h3>
 				<ul class="actions">
-					<li><a href="#" class="button icon solid fa-file">클래스 등록</a></li>
+					<li><a href="/HobbyDetail/MUSIC_02.jsp" class="button icon solid fa-file">클래스 등록</a></li>
 				</ul>
 				</article>
 			</div>
@@ -254,59 +254,6 @@
 	</section>
 	
 	
-	<!-- user -->
-	
-  
-
-
-<div class="about">
-   <a class="bg_links social portfolio" href="https://www.rafaelalucas.com/dailyui" target="_blank">
-      <span class="icon"></span>
-   </a>
-   <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
-      <span class="icon"></span>
-   </a>
-   <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
-      <span class="icon"></span>
-   </a>
-   
-</div>
-<!-- end about -->
-
-<div class="wrapper">
-
-   <section class="module-team">
-
-      <div class="team">
-        
-         <div class="team-cards">
-
-            <!-- Slider main container -->
-            <div class="swiper-container">
-               <!-- Additional required wrapper -->
-               <div class="swiper-wrapper"></div>
-
-            </div>
-
-            <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
-            <div class="navigation">
-               <div class="swiper-button-prev"></div>
-               <div class="swiper-button-next"></div>
-            </div>
-         </div>
-
-      </div>
-</div>
-
-</section>
-
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js'></script><script  src="./script.js"></script>
-
-
 	
 	<!-- Best -->
 	<!-- Footer -->

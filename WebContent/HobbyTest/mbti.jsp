@@ -9,7 +9,7 @@
 <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 
 <link rel="stylesheet" href="../assets/css/mbti.css">
-
+<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <div class="homepage is-preload">
@@ -26,7 +26,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
+                           <li><a href="/index.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -198,19 +198,7 @@
               </div>
             </div>
           </li>
-        </ul>
-      <div class="grid">
-        <div class="column-xs-12">
-          <div class="controls">
-              <button class="previous">
-                <span class="visually-hidden">Previous</span>
-                <span class="icon arrow-left" aria-hidden="true"></span>
-              </a>
-              <button class="next">
-                <span class="visually-hidden">Next</span>
-                <span class="icon arrow-right" aria-hidden="true"></span>
-              </a>
-            </div>
+    
           </div>
       </div>
     </div>

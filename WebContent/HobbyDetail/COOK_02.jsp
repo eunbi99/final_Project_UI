@@ -133,7 +133,7 @@
 					<form id="getclass" method="post" action="/HobbyDetail/myClassPro.jsp" name="myClass">
 						<input type="submit" value="클래스 신청하기" id="submit" name="entryBtn" >
 						<input type="hidden" name="class_id" value="COOK_02">
-						<input type="hidden" name="entry_yn" value="Y">
+						<input type="hidden" name="entry_yn" id="like_yn" value="Y">
 					</form>
 				<%}else{ %>
 
@@ -170,6 +170,7 @@
 			if( like_yn =='Y'){
 				var text = $('input[name=likeYnBtn]').val();
 				$('input[name=likeYnBtn]').val('좋아요 취소');
+				$('#like_yn').val('N');
 			}
 	   });
 	   

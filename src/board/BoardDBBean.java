@@ -26,12 +26,12 @@ public class BoardDBBean {
     	PreparedStatement pstmt=null;
     	
     	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
-    	String jdbc_url  = "jdbc:mysql://localhost:3306/bdbjsp?characterEncoding=UTF-8&serverTimezone=UTC";
+    	String jdbc_url  = "jdbc:mysql://localhost/qwwa79?characterEncoding=UTF-8&serverTimezone=UTC";
     	
     	
     		try {
     			Class.forName(jdbc_driver);
-    			conn=DriverManager.getConnection(jdbc_url,"root","1234");
+    			conn=DriverManager.getConnection(jdbc_url,"qwwa79","kimju853!");
     		} catch (Exception e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();

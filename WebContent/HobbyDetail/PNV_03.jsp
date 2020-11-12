@@ -148,7 +148,7 @@
 				<form method="post" action="/HobbyDetail/myClassPro.jsp" name="myClass">
 					<input type="submit" value="좋아요" id="submit" name="likeYnBtn" >
 					<input type="hidden" name="class_id" value="PNV_03">
-					<input type="hidden" name="like_yn" value="Y">
+					<input type="hidden" name="like_yn" id="like_yn" value="Y">
 				</form>	
 				</article>
 			</div>
@@ -176,6 +176,7 @@
 			if( like_yn =='Y'){
 				var text = $('input[name=likeYnBtn]').val();
 				$('input[name=likeYnBtn]').val('좋아요 취소');
+				$('#like_yn').val('N');
 			}
 	   });
 	   

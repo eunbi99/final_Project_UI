@@ -116,7 +116,7 @@
 			<div class="container">
 		 		<div id="content">
 		 		
-		 	<p>글목록(전체 글:<%=count%>)</p>
+		 	<h2>Q&A</h2>
 			
 			<% if (count == 0) { %>
 			

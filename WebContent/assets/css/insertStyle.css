@@ -15,10 +15,10 @@
   height: 100%;
 }
 .i_container .i_wrapper {
-  padding: 40px;
+  padding: 10px;
   background-color: #fff;
   border-radius: 20px;
-  width: 500px;
+  width: 600px;
   z-index: 1;
 }
 .i_container .i_wrapper .i_header {

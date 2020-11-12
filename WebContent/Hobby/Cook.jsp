@@ -3,23 +3,24 @@
 
 <html>
 <head>
-   <title>DIY</title>
+   <title>Cook</title>
    <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
    <link rel="stylesheet" href="../assets/css/Hobby.css">
+   <link rel="import" href="../DATA.js">
 </head>
 
 <body class="homepage is-preload">
       <div id="page-wrapper">
 
-         <!-- Header -->
+        <!-- Header -->
             <section id="header">
                <div class="container">
 
                   <!-- Nav 진짜마지막 -->
                      <nav id="nav">
                         <ul class="mainnav">
-                        	<li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
+                        	<li><a href="/index.jsp"><span>About Us</span></a></li>
                          	<li>
                               <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
@@ -67,7 +68,7 @@
        <div id="my-Sidebar">
            <h2>HOBBY</h2>
               <ul>
-                    <li><a href="Art.jsp" >Art</a></li>
+                   <li><a href="Art.jsp" >Art</a></li>
                    <li><a href="Cook.jsp" >Cook</a></li>
                    <li><a href="DIY.jsp" >DIY</a></li>
                    <li><a href="Language.jsp" >Language</a></li>
@@ -82,29 +83,38 @@
              <div class="row">
                  <div class="column">
                    <div class="card">
-                      <a href="/HobbyDetail/DIY_01.jsp?classId=DIY_01" class="image featured"><img src="/assets/css/images/DIY_01.jpg" alt="" /></a>
+                      <a href="/HobbyDetail/COOK_01.jsp?classId=COOK_01" class="image featured"><img src="/assets/css/images/COOK_01.jpg" alt="" /></a>
                       <header>
-                        <h3>실과 바늘만 있다면 뭐든 만들 수 있어!</h3>
+                        <h3>오븐 없이도 완성도 높은 베이킹!</h3>
                      </header>
-                            <p>월 44,000원 (6개월)</p>
+                            <p>월 34,000원 (6개월)</p>
                    </div>
                  </div>
                  <div class="column">
                    <div class="card">
-                      <a href="/HobbyDetail/DIY_02.jsp?classId=DIY_02" class="image featured"><img src="/assets/css/images/DIY_02.jpg" alt="" /></a>
+                      <a href="/HobbyDetail/COOK_02.jsp?classId=COOK_02" class="image featured"><img src="/assets/css/images/COOK_02.jpg" alt="" /></a>
                       <header>
-                        <h3>[원데이 클래스] 단 하나뿐인 나만의 향수 만들기</h3>
+                        <h3>[원데이클래스] 슈크림과 딸기를 올려 간단하게 만드는 페스츄리</h3>
                      </header>
-                            <p>52,000원</p>
+                            <p>20,000원</p>
                    </div>
                  </div>
                  <div class="column">
                    <div class="card">
-                      <a href="/HobbyDetail/DIY_03.jsp?classId=DIY_03" class="image featured"><img src="/assets/css/images/DIY_03.jpg" alt="" /></a>
+                      <a href="/HobbyDetail/COOK_03.jsp?classId=COOK_03" class="image featured"><img src="/assets/css/images/COOK_03.jpg" alt="" /></a>
                       <header>
-                        <h3>피부 트러블 걱정 없는 수제비누 만들기</h3>
+                        <h3>채식주의자를 위한,비건푸드 레시피</h3>
                      </header>
-                            <p>월 37,000원 (6개월)</p>
+                            <p>월 46,000원 (6개월)</p>
+                   </div>
+                 </div>
+                  <div class="column">
+                   <div class="card">
+                      <a href="/HobbyDetail/COOK_04.jsp?classId=COOK_04" class="image featured"><img src="/assets/css/images/COOK_04.jpg" alt="" /></a>
+                      <header>
+                        <h3>아침부터 간식까지 요거트 활용백서</h3>
+                     </header>
+                            <p>월 29,000원 (6개월)</p>
                    </div>
                  </div>
                    </div>
@@ -119,7 +129,5 @@
          <script src="../assets/js/breakpoints.min.js"></script>
          <script src="../assets/js/util.js"></script>
          <script src="../assets/js/main.js"></script>
-         <script type="text/javascript" src="../DATA.js"></script>
    </body>
 </html>
-

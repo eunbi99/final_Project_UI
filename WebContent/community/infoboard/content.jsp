@@ -136,28 +136,30 @@
   <tr height="30">      
   
     <td colspan="4" align="right" > 
-    <%if("admin".equals(session.getAttribute("id"))){ %>
+    <% if(session.getAttribute("id")!=null){%>
+    <%if(session.getAttribute("id").equals(article.getWriter())){%> 
    <input type="button" value="글수정" 
-       onclick="document.location.href='/ServiceCenter/Q&Aboard/qna_updateForm.jsp?num=<%=article.getNum()%>&pageNum=<%=pageNum%>'">
-      
+       onclick="document.location.href='/community/infoboard/info_updateForm.jsp?num=<%=article.getNum()%>&pageNum=<%=pageNum%>'">
+
     &nbsp;&nbsp;&nbsp;&nbsp;
    <input type="button" value="글삭제" 
-       onclick="document.location.href='/ServiceCenter/Q&Aboard/qna_deleteForm.jsp?num=<%=article.getNum()%>&pageNum=<%=pageNum%>'">
+       onclick="document.location.href='/community/infoboard/info_deleteForm.jsp?num=<%=article.getNum()%>&pageNum=<%=pageNum%>'">
      
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <%} %>
+    <%}%>
+    <input type="button" value="답글쓰기" 
+       onclick="document.location.href='/community/infoboard/info_writeForm.jsp?num=<%=num%>&ref=<%=ref%>&re_step=<%=re_step%>&re_level=<%=re_level%>'">
+       <%} %>
+    &nbsp;&nbsp;&nbsp;&nbsp;
        <input type="button" value="글목록" 
-       onclick="document.location.href='/ServiceCenter/Q&Aboard/Q&A.jsp?pageNum=<%=pageNum%>'">
-  <!--pagenum을  가지고 list.jsp로 넘어간다 -->
+       onclick="document.location.href='/community/infoboard/info_board.jsp?pageNum=<%=pageNum%>'">
+ 
     </td>
   </tr>
 </table>    
 <%
  }catch(Exception e){} 
  %>
-</form>   
-</div>
-</div>
-</section>   
+</form>      
 </body>
 </html>
