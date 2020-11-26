@@ -9,6 +9,7 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css'>
 <style type="text/css">
+
 </style>
 </head>
 <body class="homepage is-preload" style="overflow-x:hidden">
@@ -20,7 +21,7 @@
                   <!-- Nav 진짜마지막 -->
                      <nav id="nav">
                         <ul class="mainnav">
-                        	<li><a href="/index.jsp"><span>About Us</span></a></li>
+                        	<li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                          	<li>
                               <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
@@ -78,7 +79,7 @@
 				
 				<a href="#" class="">
 				<!--class="image featured">-->
-				<img width= 800px height= 550px src="/assets/css/images/DIY_03.jpg" alt=""/>
+				<img width= 800px height= 550px src="/images/about1.jpg" alt=""/>
 				</a><br>
 				</article>
 				
@@ -86,7 +87,7 @@
 				<article class="box post">
 				<h2>Enjoy your life!</h2><br>
 				<!--class="image featured">-->
-				<img width= 800px height= 550px src="/assets/css/images/DIY_03.jpg" alt=""/>
+				<img width= 800px height= 550px src="/images/about2.jpg" alt=""/>
 				<br>
 				<br>
 				</article>
@@ -128,7 +129,7 @@
 						<br><br>
 						워라밸에 대한 관심이 커짐에 따라, 일하는 시간 외의 여가시간을 알차게 보내기 위한 취미활동에도 관심이 커지고 있습니다.
 						<br><br>
-						MY HOB!은 취미활동을 통해 사람들이 즐거운 시간을 보냄으로써, 스트레스를 해소하고, 성취감을 느끼며 신체적, 정신적 워라밸을 유지하기를 바랍니다.
+						MY HOB!은 사람들이 취미활동을 통해  즐거운 시간을 보냄으로서 스트레스를 해소하고, 성취감을 느끼며 신체적, 정신적 워라밸을 유지하기를 바랍니다.
 						<br><br>
 						MY HOB!과 함께하는 취미생활로 일상 속 즐거운 시간을 만들어요!
 					</p>
@@ -140,6 +141,9 @@
 		</div>
 	</div>
 	</section>
+	
+	<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+	
 </div>
 	<!-- Best -->
 	<!-- Footer -->

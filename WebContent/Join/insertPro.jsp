@@ -30,9 +30,9 @@
 	Connection conn=null;
 	PreparedStatement pstmt=null;
 	try{
-		String url="jdbc:mysql://localhost/qwwa79?serverTimezone=UTC";
-		String dbId="qwwa79";
-		String dbPass="kimju853!";
+		String url="jdbc:mysql://13.124.147.43:3306/bdbjsp?serverTimezone=UTC";
+		String dbId="root";
+		String dbPass="1234";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conn=DriverManager.getConnection(url,dbId,dbPass);
 		

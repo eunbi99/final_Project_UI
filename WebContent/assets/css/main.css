@@ -1941,6 +1941,7 @@ input, select, textarea {
 	  	margin: 0em 0 0 1em;
 	  	padding: 0em 0 0em 0;
 	  	cursor: default;
+	
        /* top: -500px;
         left:50px;
         width: 100%;
@@ -2302,11 +2303,7 @@ c_wrap {
 .slide:last-of-type {
   background-image: url("./images/image-3.jpg");
   @import url("fontawesome-all.min.css");
-/*
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 /* Header */
 
@@ -2945,12 +2942,18 @@ c_wrap {
 
 			#header > .container {
 				padding: 6em 0 4em 0;
+			
 			}
 
 			#header h1 {
 				font-size: 2em;
 				letter-spacing: 8px;
 				line-height: 1.325em;
+				
+			}
+			
+			#header a{
+				text-align:center;
 			}
 
 			#header p {
@@ -3298,17 +3301,20 @@ c_wrap {
 				max-width: 50%;
 			}
 
-		/* Header */
+		/* Header !*/
 
 			#header > .container {
-				padding: 12em 0 5em 0;
+				padding: 5em 0 5em 0;
+				
 			}
 
 			#header h1 {
 				font-size: 1.5em;
-                margin-left: 10em;
+                
+                padding-right: 1.25em;
 			}
-
+			
+			
 		/* Nav */
 
 			#nav > ul > li {

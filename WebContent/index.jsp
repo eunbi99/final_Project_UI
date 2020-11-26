@@ -18,21 +18,20 @@
             <section id="header">
                <div class="container">
 
-                 
-
-                  <!-- Nav -->
+                  
+                  <!-- Nav 최종 -->
                      <nav id="nav">
                         <ul>
                            <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
-                              <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
+                              <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
                                  <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
                            
-                           <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
+                           <li><a href="/ServiceCenter/Noticeboard/notice.jsp">
                            <span>Service Center</span></a>
                               <ul>
                                  <li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
@@ -40,7 +39,7 @@
                                  <li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
                               </ul>
                            </li>
-                           <li><a href="/community/infoboard/info_board.jsp">
+                           <li><a href="/community/freeboard/free_board.jsp">
                               <span>community</span></a>
                               <ul>
                                  <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
@@ -64,8 +63,11 @@
                                             
                         </ul>
                      </nav>
- 				<!-- Logo -->
+                     
+                     <!-- Logo -->
                      <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+                     
+                     
                </div>
             </section>
 	
@@ -83,9 +85,9 @@
 			</p>
 		</div>
 		<div class="slide">
-			<h2 class="slide-title">Photography Basics</h2>
+			<h2 class="slide-title">Extreme sports</h2>
 			<p class="slide-desc">
-				'DSLR' Camera Basics Tutorial! <br>
+				'BMX' 배우면서 스피드와 스릴을 만끽해보자!<br>
 				<br>
 				<a class="button" href="/HobbyDetail/PNV_03.jsp">view more</a>
 			</p>
@@ -109,13 +111,13 @@
 	<section class="c_wrap">
 <div class="c_container">
   <ul class="c_menu">
-    <li class="menu-item"><a href="/Hobby/Music.jsp"><img src="/images/category_music.png" width="100"></a></li>
-    <li class="menu-item"><a href="/Hobby/Cook.jsp"><img src="/images/category_cook.png" width="100"></a></li>
     <li class="menu-item"><a href="/Hobby/Art.jsp"><img src="/images/category_art.png" width="100"></a></li>
+    <li class="menu-item"><a href="/Hobby/Cook.jsp"><img src="/images/category_cook.png" width="100"></a></li>
     <li class="menu-item"><a href="/Hobby/DIY.jsp"><img src="/images/category_DIY.png" width="100"></a></li>
-    <li class="menu-item"><a href="/Hobby/Sport.jsp"><img src="/images/category_sports.png" width="100"></a></li>
-    <li class="menu-item"><a href="/Hobby/PhotoNVideo.jsp"><img src="/images/category_camera.png" width="100"></a></li>
     <li class="menu-item"><a href="/Hobby/Language.jsp"><img src="/images/category_language.png" width="100"></a></li>
+    <li class="menu-item"><a href="/Hobby/Music.jsp"><img src="/images/category_music.png" width="100"></a></li>
+    <li class="menu-item"><a href="/Hobby/PhotoNVideo.jsp"><img src="/images/category_camera.png" width="100"></a></li>
+    <li class="menu-item"><a href="/Hobby/Sport.jsp"><img src="/images/category_sports.png" width="100"></a></li>
     
   </ul>
 </div>
@@ -207,7 +209,6 @@
 				<!--class="image featured">-->
 				<iframe width="100%" height="315" src="https://www.youtube.com/embed/qaUlImOLBlo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 				</iframe>
-				
 				</a><br>
 				<br>
 				<h3>왕초보를 위한 바이올린 연주 1탄!</h3>
@@ -239,12 +240,12 @@
 					<article class="box excerpt2">
 					<header>
 					<span class="date">1개월</span>
-					<h3><a href="#">어쿠스틱 기타</a></h3>
-					</header>
-					<p>
-						손가락 하프, 엄지피아노 등의 별명을 갖고 있는 아프리카의 체명악기 랍니다.'작은 음악' 이라는 뜻을 가진 칼림바는 맑고 영롱한 음이 전해지는 악기예요.<strong> 피아노 처럼 아름다운 건반음을 내는 칼림바</strong>에 흥미를 느끼신다면 지금 당장 클래스에 등록하세요~
-					</p>
-					</article>
+               <h3><a href="#">바이올린</a></h3>
+               </header>
+               <p>
+                  '악기 제조의 위대한 승리'라고 불리는 바이올린은 작은 크기에도 불구하고 4옥타브 이상의 음역을 내풍부한 표현력과 다양한 음색을 연출하기 탁월한 현악기입니다.
+                  <br> <strong>아름다운 선율에</strong>에 흥미를 느끼신다면 지금 당장 클래스에 등록하세요~
+               </p>					</article>
 					</li>
 				</ul>
 				</section>
@@ -253,8 +254,7 @@
 	</div>
 	</section>
 	
-	
-	
+		
 	<!-- Best -->
 	<!-- Footer -->
 	<section id="footer">
@@ -330,7 +330,11 @@
 		</ul>
 	</div>
 	</section>
+	
 </div>
+
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.dropotron.min.js"></script>

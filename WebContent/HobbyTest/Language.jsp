@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/assets/css/Recommend.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body style="overflow-x:hidden">
 <div id="page-wrapper">
    <!-- Header -->
             <section id="header">
@@ -18,7 +18,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -135,7 +135,7 @@
                    영어를 쓰는 인구의 숫자는 세계2위를 차지하고 있으며, 아마도 영어를 쓰는 인구의 분포율은 세계 1위를 차지하고 있을 것이다.<br>
                     이렇게 많은 국가에서 영어가 통용되고 있으며, 영어를 배운다면 많은 국가에서 언어 문제로 고생할 가능성이 줄어든다는 이점이 있다. 
                </p>
-               <!--//연혁-->
+               <br>
                
                <div class="title_numbering">
                   <div class="numbering">#Language </div>
@@ -153,7 +153,7 @@
 
 
                </p>
-                    
+               <br>     
                     <div class="title_numbering">
                   <div class="numbering">#Language  </div>
                   <div class="title">
@@ -184,20 +184,20 @@
                      <li>
                         <!--<span class="list_thumb"><img src="/images/d1.jpg" alt=""></span>-->
                         <span class="list_number">01</span>
-                        <span class="list_cnt">나는 평소에<strong>다양한 문화</strong>에 관심이 있다!</span>
+                        <span class="list_cnt">&nbsp;나는 평소에<strong>다양한 문화</strong>에 관심이 있다!</span>
                      </li>
                      <li>
                         <span class="list_number">02</span>
-                        <span class="list_cnt">성격이 <strong>외향적 </strong>이다!</span>
+                        <span class="list_cnt">&nbsp;성격이 <strong>외향적 </strong>이다!</span>
                      </li>
                      <li>
                         
                         <span class="list_number">03</span>
-                        <span class="list_cnt"> <strong>이야기</strong>하는 것을 좋아한다!</span>
+                        <span class="list_cnt"> &nbsp;<strong>이야기</strong>하는 것을 좋아한다!</span>
                      </li>
                      <li>
                         <span class="list_number">04</span>
-                        <span class="list_cnt"><strong>여행</strong>을 좋아한다! </span>
+                        <span class="list_cnt">&nbsp;<strong>여행</strong>을 좋아한다! </span>
                      </li>
                      
                   </ul>
@@ -215,17 +215,19 @@
             <div class="detail-col-left">
                <div class="box-text static">
                   <p>
-                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> 다양한</span>
+                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> </span>
                      
-                     <span class="web_view"><strong><em class="underline">Language 클래스</em></strong>를 </span>
+                     <span class="web_view"><strong><em class="underline">Language</em> <br>클래스</strong>를 </span>
                      <span class="web_view"><strong><em class="sub_title">수강하세요</em></strong></span>
                   </p>
                </div>
             </div>
             <div class="detail-col-right">
                <div class="text_detail box">
-                  추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
-                        <strong>회원가입</strong>을 하시면 다양한 소식을 받아볼 수 있어요. 여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!
+              추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
+                    <a href="../Join/insertForm.jsp"><strong>회원가입</strong></a>을 하시면 다양한 소식을 받아볼 수 있어요.<br>
+                                             여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!<br><br>
+                    <a href="../Hobby/language.jsp"><em class="underline">다양한 <strong>Language</strong> 클래스 보러가기!</em></a>
                </div>
             </div>
             </div>
@@ -234,5 +236,8 @@
   </div>
 </div>
 </div>
+
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+
 </body>
 </html>

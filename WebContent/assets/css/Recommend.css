@@ -4,6 +4,7 @@ p {margin:0; padding:0;}
 em {font-style:normal;}
 ul {padding:0; margin:0;}
 section {padding-bottom:110px;}
+
 #wrap {}
 .con-box {
 	width: 1040px;
@@ -143,12 +144,16 @@ section {padding-bottom:110px;}
 	color: #000;
 	word-break: break-all; 	
 	line-height: 1.67;
+	
 }
 .text_detail.box {
 	padding: 31px 40px;
 	background: #fff;
 	box-sizing: border-box;
+	
 }
+
+
 
 .talk_area {
     width: 600px;

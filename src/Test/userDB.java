@@ -29,20 +29,19 @@ public class userDB {
 	    	Connection conn=null;
 	    	PreparedStatement pstmt=null;
 	    	
+
 	    	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
-	    	String jdbc_url  = "jdbc:mysql://localhost/qwwa79?characterEncoding=UTF-8&serverTimezone=UTC";
-	    	
+	    	String jdbc_url  = "jdbc:mysql://13.124.147.43:3306/bdbjsp?characterEncoding=UTF-8&serverTimezone=UTC";
 	    	
 	    		try {
 	    			Class.forName(jdbc_driver);
-	    			conn=DriverManager.getConnection(jdbc_url,"qwwa79","kimju853!");
+	    			conn=DriverManager.getConnection(jdbc_url,"root","1234");
 	    			
     		} catch (Exception e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
     		
-    	 
         return conn;
     }
 	
@@ -138,37 +137,34 @@ public class userDB {
 	}
 	
 	//회원정보 수정하기 -찐수정
-		public boolean modifyData(user bean){
+		public boolean modifyData(user bean) throws Exception{
 			
-			Connection conn = null;
-		    PreparedStatement pstmt = null;
-		    ResultSet rs = null;
-		    
-			boolean b = true;
+			 Connection conn = null;
+		       PreparedStatement pstmt = null;
+		        ResultSet rs= null;
+			boolean b=false;
+		 
 			try {
 				conn = getConnection();
-				String sql = "update user set passwd=?,name=?, email=?,address=?, phone=?,birth=? where id=?";
-				pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, bean.getPasswd());
-				pstmt.setString(2, bean.getName());
-				pstmt.setString(3, bean.getEmail());
-				pstmt.setString(4, bean.getAddress());
-				pstmt.setString(5, bean.getPhone());
-				pstmt.setString(6, bean.getBirth());
-				pstmt.setString(7, bean.getHobby());
-				pstmt.setString(8, bean.getId());
-				pstmt.executeUpdate();
-			} catch (Exception e) {
+				String sql = "update user set passwd=?,name=?, email=?,address=?,birth=?, phone=? where id=?";
 				
-			} finally {
-				try {
-					if(rs!=null)rs.close();
-					if(pstmt!=null)pstmt.close();
-					if(conn!=null)conn.close();
-				} catch (Exception e2) {
-
-				}
-			}
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1,bean.getPasswd());
+				pstmt.setString(2,bean.getName());
+				pstmt.setString(3,bean.getEmail());
+				pstmt.setString(4,bean.getAddress());
+				pstmt.setString(5,bean.getBirth());
+				pstmt.setString(6,bean.getPhone());
+				pstmt.setString(7,bean.getId());
+				pstmt.executeUpdate();
+				b=true;
+			} catch(Exception ex) {
+	            ex.printStackTrace();
+	        } finally {
+				if (rs != null) try { rs.close(); } catch(SQLException ex) {}
+	            if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+	            if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+	        }
 			return b;
 		}
 		

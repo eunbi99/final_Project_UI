@@ -33,7 +33,9 @@
 		 keyField=request.getParameter("keyField");	
 		 keyword=request.getParameter("keyword");
 	}
+
 	articleList = dbPro.getArticles(startRow, pageSize, boardType, keyField, keyword);
+
 	if(articleList!=null){
 		count=dbPro.getArticleCount(boardType);
 	}
@@ -47,24 +49,25 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="/assets/css/Board.css"/>
 </head>
-<body class="homepage is-preload">
-		<div id="page-wrapper">
-
-			<!-- Header -->
+<body class="homepage is-preload" style="overflow-x:hidden">
+<div id="page-wrapper">
+	<!-- Header -->
             <section id="header">
                <div class="container">
 
-                  <!-- Nav 진짜마지막 -->
+                  
+                  <!-- Nav 최종 -->
                      <nav id="nav">
-                        <ul class="mainnav">
-                        	<li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
-                         	<li>
+                        <ul>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
+                           <li>
                               <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
                                  <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
+                           
                            <li><a href="/ServiceCenter/Noticeboard/notice.jsp">
                            <span>Service Center</span></a>
                               <ul>
@@ -79,15 +82,16 @@
                                  <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
                                  <li><a href="/community/infoboard/info_board.jsp">정보게시판</a></li>
                               </ul>
+                           
                            </li>
-                        </ul>
-                        <ul class="navtop"> 
+                        </ul> 
+                                <ul class="navtop"> 
                         			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
-	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a href="/Join/Logout.jsp">Logout</a></li>
 	                                	
                                 	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
-	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a href="/Join/Logout.jsp">Logout</a></li>
 	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
                                 	<%}else{%>       
                                 	<li><a href="/Join/LoginForm.jsp">Login</a></li>
@@ -97,10 +101,14 @@
                         </ul>
                      </nav>
                      
-                      <!-- Logo-->
-                  <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+                     <!-- Logo -->
+                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+                     
+                     
                </div>
             </section>
+	
+	
  		<div id="my-Sidebar">
         	<h2>커뮤니티</h2>
         		<ul>
@@ -205,6 +213,8 @@
 				  	</tr>
 				  	</table>
 			  	</div>
+			  	
+			  	<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
 			</form>	
 			<div style="text-align:center">
 			<%

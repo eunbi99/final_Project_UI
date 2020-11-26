@@ -14,9 +14,7 @@
             <section id="header">
                <div class="container">
 
-                  <!-- Logo -->
-                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
-
+                  
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
@@ -47,7 +45,9 @@
                            </li>
                         </ul>
                      </nav>
-
+				<!-- Logo -->
+                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+				
                </div>
             </section>
     <div align="center">        

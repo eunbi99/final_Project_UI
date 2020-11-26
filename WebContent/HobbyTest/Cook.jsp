@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/assets/css/Recommend.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body style="overflow-x:hidden">
 <div id="page-wrapper">
    <!-- Header -->
             <section id="header">
@@ -20,14 +20,14 @@
                         <ul>
                            <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
-                              <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
+                              <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
                                  <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
                            
-                           <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
+                           <li><a href="/ServiceCenter/Noticeboard/notice.jsp">
                            <span>Service Center</span></a>
                               <ul>
                                  <li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
@@ -35,7 +35,7 @@
                                  <li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
                               </ul>
                            </li>
-                           <li><a href="/community/infoboard/info_board.jsp">
+                           <li><a href="/community/freeboard/free_board.jsp">
                               <span>community</span></a>
                               <ul>
                                  <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
@@ -135,7 +135,7 @@
                   한식은 대한민국에서 발달한 고유하고도 전통적인 음식을 뜻한다. 
                   <br>복잡한 궁중요리부터 지방의 특색 요리, 현대의 요리까지 재료와 조리법이 매우 다양하다. 쉽게 접할 수 있는 요리부터 생소한 요리까지 한식클래스를 통해 한국의 전통적인 음식을 배워보자
                </p>
-               <!--//연혁-->
+               <br>
                
                <div class="title_numbering">
                   <div class="numbering">#COOK </div>
@@ -155,9 +155,9 @@
 
 
                </p>
-                    
+               <br>     
                     <div class="title_numbering">
-                  <div class="numbering">#ART </div>
+                  <div class="numbering">#COOK </div>
                   <div class="title">
                      타이푸드
                   </div>
@@ -188,24 +188,24 @@
                      <li>
                         <!--<span class="list_thumb"><img src="/images/d1.jpg" alt=""></span>-->
                         <span class="list_number">01</span>
-                        <span class="list_cnt">나는 평소에<strong> 손재주 </strong>가 있다!</span>
+                        <span class="list_cnt">&nbsp;나는 평소에<strong> 손재주 </strong>가 있다!</span>
                      </li>
                      <li>
                         <span class="list_number">02</span>
-                        <span class="list_cnt">무엇인가를 <strong>끈기 </strong>있게 한다!</span>
+                        <span class="list_cnt">&nbsp;무엇인가를 <strong>끈기 </strong>있게 한다!</span>
                      </li>
                      <li>
                         
                         <span class="list_number">03</span>
-                        <span class="list_cnt"> <strong>결과물</strong>을 만들어내는 것을 좋아한다!</span>
+                        <span class="list_cnt">&nbsp; <strong>결과물</strong>을 만들어내는 것을 좋아한다!</span>
                      </li>
                      <li>
                         <span class="list_number">04</span>
-                        <span class="list_cnt">야외보단<strong>실내</strong>에서 활동하기를 좋아한다! </span>
+                        <span class="list_cnt">&nbsp;야외보단<strong>실내</strong>에서 활동하기를 좋아한다! </span>
                      </li>
                      <li>
                         <span class="list_number">05</span>
-                        <span class="list_cnt"><strong>음식</strong>을 좋아한다!</span>
+                        <span class="list_cnt">&nbsp;<strong>음식</strong>을 좋아한다!</span>
                      </li>
                   </ul>
                </div>
@@ -222,7 +222,7 @@
             <div class="detail-col-left">
                <div class="box-text static">
                   <p>
-                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> 다양한</span>
+                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> </span>
                      
                      <span class="web_view"><strong><em class="underline">Cook 클래스</em></strong>를 </span>
                      <span class="web_view"><strong><em class="sub_title">수강하세요</em></strong></span>
@@ -232,7 +232,9 @@
             <div class="detail-col-right">
                <div class="text_detail box">
                   추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
-                        <strong>회원가입</strong>을 하시면 다양한 소식을 받아볼 수 있어요. 여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!
+                    <a href="../Join/insertForm.jsp"><strong>회원가입</strong></a>을 하시면 다양한 소식을 받아볼 수 있어요.<br>
+                                             여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!<br><br>
+                    <a href="../Hobby/Cook.jsp"><em class="underline">다양한 <strong>Cook</strong> 클래스 보러가기!</em></a>
                </div>
             </div>
             </div>
@@ -241,5 +243,6 @@
   </div>
 </div>
 </div>
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
 </body>
 </html>

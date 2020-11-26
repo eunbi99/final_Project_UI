@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/assets/css/Recommend.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body style="overflow-x:hidden">
 <div id="page-wrapper">
    <!-- Header -->
             <section id="header">
@@ -18,7 +18,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -137,7 +137,7 @@
                   암벽등반 시 나타나는 장애물 극복 방법으로 시작된 클라이밍은 인기 스포츠의 한 분야로 자리 잡게 되었다.클라이밍은 허벅지부터 종아리, 복부 등 온 몸의 근육을 사용하는 전신운동으로 체력 및 근력을 기를수있을 뿐만아니라 스트레스 해소와 집중력향상에도 좋은 효과를 가지고 있다.<br>
                    실내에 있기 때문에 날씨에 상관없이 언제든 혼자 즐길 수도 있고 친구들과 함께 즐길 수 있는 스포츠이다.
                </p>
-               <!--//연혁-->
+               <br>
                
                <div class="title_numbering">
                   <div class="numbering">#Sport </div>
@@ -154,7 +154,7 @@
                             필라테스는 근육의 활성도을 높여 근육의 균형을 잡아 올바른 자세를 유지시켜줌으로써 신체를 편안하고 자연스럽게 움직일 수 있도록 재교육 하는 운동요법입니다. 필라테스는 신체 균형성, 안정성과 유연성, 통증 감소에 효과적인 운동으로 최근 일반인 사이에서도 큰 인기를 끌고 있는 취미 중 하나로 자리 잡고 있다.
 
                </p>
-                    
+               <br>     
                     <div class="title_numbering">
                   <div class="numbering">#Sport </div>
                   <div class="title">
@@ -186,24 +186,24 @@
                      <li>
                         <!--<span class="list_thumb"><img src="/images/d1.jpg" alt=""></span>-->
                         <span class="list_number">01</span>
-                        <span class="list_cnt">나는 평소에<strong>운동신경</strong>이 있다!</span>
+                        <span class="list_cnt"> &nbsp; 나는 평소에 <strong>운동신경</strong>이 있다!</span>
                      </li>
                      <li>
                         <span class="list_number">02</span>
-                        <span class="list_cnt">무엇인가를 <strong>끈기 </strong>있게 한다!</span>
+                        <span class="list_cnt"> &nbsp; 무엇인가를 <strong>끈기 </strong>있게 한다!</span>
                      </li>
                      <li>
                         
                         <span class="list_number">03</span>
-                        <span class="list_cnt"> <strong>체력</strong>이 부족함을 느낀다 !</span>
+                        <span class="list_cnt"> &nbsp; <strong>체력</strong>이 부족함을 느낀다 !</span>
                      </li>
                      <li>
                         <span class="list_number">04</span>
-                        <span class="list_cnt">실내 보단<strong>야외</strong>에서 활동하기를 좋아한다! </span>
+                        <span class="list_cnt">&nbsp; 실내 보단 <strong>야외</strong>에서 활동하기를 좋아한다! </span>
                      </li>
                      <li>
                         <span class="list_number">05</span>
-                        <span class="list_cnt"><strong>규칙적</strong>인 생활이 필요하다!</span>
+                        <span class="list_cnt">&nbsp;<strong>규칙적</strong>인 생활이 필요하다!</span>
                      </li>
                   </ul>
                </div>
@@ -220,9 +220,9 @@
             <div class="detail-col-left">
                <div class="box-text static">
                   <p>
-                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> 다양한</span>
+                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> </span>
                      
-                     <span class="web_view"><strong><em class="underline">Sports 클래스</em></strong>를 </span>
+                     <span class="web_view"><strong><em class="underline">Sport 클래스</em></strong>를 </span>
                      <span class="web_view"><strong><em class="sub_title">수강하세요</em></strong></span>
                   </p>
                </div>
@@ -230,7 +230,9 @@
             <div class="detail-col-right">
                <div class="text_detail box">
                   추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
-                        <strong>회원가입</strong>을 하시면 다양한 소식을 받아볼 수 있어요. 여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!
+                    <a href="../Join/insertForm.jsp"><strong>회원가입</strong></a>을 하시면 다양한 소식을 받아볼 수 있어요.<br>
+                                             여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!<br><br>
+                    <a href="../Hobby/Sport.jsp"><em class="underline">다양한 <strong>Sport</strong> 클래스 보러가기!</em></a>
                </div>
             </div>
             </div>
@@ -239,5 +241,6 @@
   </div>
 </div>
 </div>
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
 </body>
 </html>

@@ -63,7 +63,7 @@
                   <!-- Nav 진짜마지막 -->
                      <nav id="nav">
                         <ul class="mainnav">
-                        	<li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
+                        	<li><a href="/AboutUs/AboutUs.jspp"><span>About Us</span></a></li>
                          	<li>
                               <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
@@ -90,10 +90,10 @@
                         <ul class="navtop"> 
                         			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
-	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a href="/Join/Logout.jsp">Logout</a></li>
 	                                	
                                 	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
-	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a href="/Join/Logout.jsp">Logout</a></li>
 	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
                                 	<%}else{%>       
                                 	<li><a href="/Join/LoginForm.jsp">Login</a></li>
@@ -121,7 +121,7 @@
 			<div class="container">
 		 		<div id="content">
 		 		
-		 	<h2>Notice</h2>
+		 	<h2>공지사항</h2>
 			
 			
 			<% if (count == 0) { %>
@@ -240,5 +240,8 @@
 				location.href="/ServiceCenter/Noticeboard/notice_writeForm.jsp";
 			}
 			</script>
+			
+			<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+			
 	</body>
 </html>

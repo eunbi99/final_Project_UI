@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/assets/css/Recommend.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body style="overflow-x:hidden">
 <div id="page-wrapper">
    <!-- Header -->
             <section id="header">
@@ -18,7 +18,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -134,7 +134,7 @@
                    바이올린 족 현악기 중 가장 높은 음을 내며, 음역대가 넓고, 빠른 속주부터 서정적 멜로디까지 다양한 연주가 가능하다.
                    인기가 많은 악기중 상위권에 속하며, 연주할 때 자세가 우아하고 절도 있어 보이기에 인기가 많다.
                </p>
-               <!--//연혁-->
+               <br>
                
                <div class="title_numbering">
                   <div class="numbering">#MUSIC </div>
@@ -155,6 +155,7 @@
 
 
                </p>
+               <br> 
                     
                     <div class="title_numbering">
                   <div class="numbering">#MUSIC </div>
@@ -187,20 +188,20 @@
                      <li>
                         <!--<span class="list_thumb"><img src="/images/d1.jpg" alt=""></span>-->
                         <span class="list_number">01</span>
-                        <span class="list_cnt">나는 평소에<strong> 손재주 </strong>가 있다!</span>
+                        <span class="list_cnt">&nbsp;나는 평소에<strong> 손재주 </strong>가 있다!</span>
                      </li>
                      <li>
                         <span class="list_number">02</span>
-                        <span class="list_cnt">무엇인가를 <strong>끈기 </strong>있게 한다!</span>
+                        <span class="list_cnt">&nbsp;무엇인가를 <strong>끈기 </strong>있게 한다!</span>
                      </li>
                      <li>
                         
                         <span class="list_number">03</span>
-                        <span class="list_cnt"> <strong>박자감각</strong>이 좋다!</span>
+                        <span class="list_cnt"> &nbsp;<strong>박자감각</strong>이 좋다!</span>
                      </li>
                      <li>
                         <span class="list_number">04</span>
-                        <span class="list_cnt"><strong>음악</strong>을 자주 접한다. </span>
+                        <span class="list_cnt">&nbsp;<strong>음악</strong>을 자주 접한다. </span>
                      </li>
                    
                   </ul>
@@ -218,7 +219,7 @@
             <div class="detail-col-left">
                <div class="box-text static">
                   <p>
-                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> 다양한</span>
+                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> </span>
                      
                      <span class="web_view"><strong><em class="underline">Music 클래스</em></strong>를 </span>
                      <span class="web_view"><strong><em class="sub_title">수강하세요</em></strong></span>
@@ -227,8 +228,10 @@
             </div>
             <div class="detail-col-right">
                <div class="text_detail box">
-                  추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
-                        <strong>회원가입</strong>을 하시면 다양한 소식을 받아볼 수 있어요. 여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!
+              추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
+                    <a href="../Join/insertForm.jsp"><strong>회원가입</strong></a>을 하시면 다양한 소식을 받아볼 수 있어요.<br>
+                                             여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!<br><br>
+                    <a href="../Hobby/Music.jsp"><em class="underline">다양한 <strong>Music</strong> 클래스 보러가기!</em></a>
                </div>
             </div>
             </div>
@@ -237,5 +240,8 @@
   </div>
 </div>
 </div>
+
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+
 </body>
 </html>

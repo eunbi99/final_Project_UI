@@ -59,7 +59,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -87,6 +87,7 @@
                         </ul> 
                                 <ul class="navtop"> 
                         			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
+                        			    <li><%=id %>님 환영합니다.</li>
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
 	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
 	                                	
@@ -106,9 +107,9 @@
 	<!-- 게시판  -->
 		<div id="list">
 			<tr>
-				<td><%=id %>님 환영합니다.</td>
-				<td><a href="/admin/boardList.jsp" >전체 게시물</a></td>
-				<td><a href="/admin/memberList.jsp">회원 목록</a></td>
+				
+				<td><a href="/admin/boardList.jsp" >전체 게시물</a>&nbsp;|</td>
+				<td><a href="/admin/memberList.jsp">회원 목록</a>&nbsp;|</td>
 				<td><a href="../index.jsp">메인으로</a></td>
 			</tr>
 		 	<p align="center">글목록(전체 글:<%=count%>)</p>
@@ -169,6 +170,9 @@
 				  	</table>
 			  	</div>
 			</form>	
+			
+			<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+			
 			 </div> 	
 			<div style="text-align:center">
 			<%

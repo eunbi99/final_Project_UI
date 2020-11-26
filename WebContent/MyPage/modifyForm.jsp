@@ -104,7 +104,7 @@
 								            <tr>
 								                <td align="center"><b>생년월일</b></td>
 								                <td>
-								                	<input type="text" name="birth" size="10" value=<%=use.getBirth()%>>
+								                	<input type="text" name="birth" size="10" value=<%=use.getPhone()%>>
 								                	<%-- <input type="text" name="birth" size="10" value="<%=use.getBirth()%>">월
 								               		<input type="text" name="birth" size="10" value="<%=use.getBirth()%>">일 --%>
 								                	<!-- <input type="radio" name="양력음력" value="양력">양력
@@ -114,7 +114,7 @@
 								              <tr>
 								                <td align="center"><b>휴대전화</b></td>
 								                <td>
-								               		 <input type="text" id="phone" value=<%=use.getPhone()%> style="width:70px;">
+								               		 <input type="text" id="phone" value=<%=use.getBirth()%> style="width:70px;">
 								               		 	<!-- <option value="선택">선택</option>
 									                	<option value="010">010</option>
 									                	<option value="011">011</option>
@@ -127,14 +127,16 @@
 								                </td>
 								            </tr>
 								                   
-								             <tr>
-		                                        <td align="center"><b>관심분야</b>
-		                                        <td colspan = "7" >
-		                                        <input type="checkbox" id="ch1" name="hobby" value="예술" >예술
-		                                       <input type="checkbox" id="ch2" name="hobby" value="음악">음악
-		                                       <input type="checkbox" id="ch3" name="hobby" value="스포츠">스포츠
-                                        </td>
-                                    </tr>
+								            <tr>
+								                <td align="center"><b>관심분야</b>
+								                <td colspan = "7" >
+								                    <input type="radio" name="관심분야" value="운동" checked>운동
+								                    <input type="radio" name="관심분야" value="요리" checked>요리
+								                    <input type="radio" name="관심분야" value="여행" checked>여행
+								                    <input type="radio" name="관심분야" value="영화감상" checked>영화감상
+								                    <input type="radio" name="관심분야" value="음악감상" checked>음악감상
+								                </td>
+								            </tr>
         					</table>
         					</form>
         								<input type="submit" id="btnModify" value="수정완료" onClick="location.href='/MyPage/modifyPro.jsp'" 

@@ -81,8 +81,9 @@ html,body {padding:0;margin:0;}
   font:12px Arial, san-serif;
 }
 h1.likert-header {
-  padding-left:4.25%;
+  padding-left:7%;
   margin:20px 0 0;
+  font-size:x-large;
 }
 
 .right-align{
@@ -99,7 +100,7 @@ form .statement {
   display:block;
   font-size: 14px;
   font-weight: bold;
-  padding: 30px 0 0 4.25%;
+  padding: 30px 0 0 7%;
   margin-bottom:10px;
 }
 form .likert {
@@ -114,12 +115,12 @@ form .likert:last-of-type {border-bottom:0;}
 form .likert:before {
   content: '';
   position:relative;
-  top:11px;
+  top:20px;
   left:9.5%;
   display:block;
   background-color:#efefef;
   height:4px;
-  width:78%;
+  width:77%;
 }
 form .likert li {
   display:inline-block;
@@ -138,7 +139,7 @@ form .likert li input[type=checkbox] {
 form .likert li label {width:100%;}
 form .buttons {
   margin:30px 0;
-  padding:0 4.25%;
+  padding:0 7%;
   text-align:right
 } 
 form .buttons button {

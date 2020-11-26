@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/assets/css/Recommend.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body style="overflow-x:hidden">
 <div id="page-wrapper">
    <!-- Header -->
             <section id="header">
@@ -134,7 +134,7 @@
                   어플에 있는 다양한 툴을 배우고 브러쉬 설정과 팁을 배워 사물부터 인물까지 색칠하거나 그려볼 수 있다. 
                   <br>좋아하는 인물의 사진을 따라 그려보거나 직접 캐릭터를 만들어 태블릿 내의 다이어리 스티커로 사용해보는 것도 추천한다. 
                </p>
-               <!--//연혁-->
+               <br>
                
                <div class="title_numbering">
                   <div class="numbering">#ART </div>
@@ -150,7 +150,7 @@
                             오일파스텔의 다양한 색상을 이용하여 그림을 그려보는 것은 어떨까.<br>
                                평소 그림을 그리는데 어려움을 겪었던 분들도 오일파스텔 하나만 있다면 주제부터 이미지까지 직접 정하여 자신이 그리고 싶었던 풍경화부터 명화 까지 다양한 색감을 이용하여 재미있게 완성할 수 있을 것이다.
 
-               </p>
+               </p><br>
                     
                     <div class="title_numbering">
                   <div class="numbering">#ART </div>
@@ -164,7 +164,8 @@
                   <p class="text_detail">
                   유화 또는 유채화는 서양미술의 대표적 형태 중 하나로, 기름으로 갠 물감(안료)을 사용하여 그리는 서양화의 한 기법이다.
                    유화물감의 깊고 은은한 색채의 매력으로 많은 사랑을 받고 있다. 
-                  뿐만 아니라 여러번 덧칠도 가능하며 물감 특유의 질감을 이용한 표현도 수월한 방식이다.
+                  뿐만 아니라 여러번 덧칠도 가능하며 물감 특유의 질감을 이용한 표현도 수월한 방식이다.</p>
+                  <br>
                     
                      <div class="title_numbering">
                   <div class="numbering">#ART </div>
@@ -199,24 +200,24 @@
                      <li>
                         <!--<span class="list_thumb"><img src="/images/d1.jpg" alt=""></span>-->
                         <span class="list_number">01</span>
-                        <span class="list_cnt">나는 평소에<strong> 손재주 </strong>가 있다!</span>
+                        <span class="list_cnt">&nbsp;나는 평소에<strong> 손재주 </strong>가 있다!</span>
                      </li>
                      <li>
                         <span class="list_number">02</span>
-                        <span class="list_cnt">무엇인가를 <strong>끈기 </strong>있게 한다!</span>
+                        <span class="list_cnt">&nbsp;무엇인가를 <strong>끈기 </strong>있게 한다!</span>
                      </li>
                      <li>
                         
                         <span class="list_number">03</span>
-                        <span class="list_cnt"> <strong>결과물</strong>을 만들어내는 것을 좋아한다!</span>
+                        <span class="list_cnt">&nbsp; <strong>결과물</strong>을 만들어내는 것을 좋아한다!</span>
                      </li>
                      <li>
                         <span class="list_number">04</span>
-                        <span class="list_cnt">야외보단<strong>실내</strong>에서 활동하기를 좋아한다! </span>
+                        <span class="list_cnt">&nbsp;야외보단 <strong>실내</strong>에서 활동하기를 좋아한다! </span>
                      </li>
                      <li>
                         <span class="list_number">05</span>
-                        <span class="list_cnt"><strong>미술</strong>을 좋아한다!</span>
+                        <span class="list_cnt">&nbsp;<strong>미술</strong>을 좋아한다!</span>
                      </li>
                   </ul>
                </div>
@@ -233,7 +234,7 @@
             <div class="detail-col-left">
                <div class="box-text static">
                   <p>
-                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> 다양한</span>
+                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"></span>
                      
                      <span class="web_view"><strong><em class="underline">Art 클래스</em></strong>를 </span>
                      <span class="web_view"><strong><em class="sub_title">수강하세요</em></strong></span>
@@ -242,8 +243,10 @@
             </div>
             <div class="detail-col-right">
                <div class="text_detail box">
-                  추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
-                        <strong>회원가입</strong>을 하시면 다양한 소식을 받아볼 수 있어요. 여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!
+               	  추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
+                    <a href="../Join/insertForm.jsp"><strong>회원가입</strong></a>을 하시면 다양한 소식을 받아볼 수 있어요.<br>
+                                             여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!<br><br>
+                    <a href="../Hobby/Art.jsp"><em class="underline">다양한 <strong>Art</strong> 클래스 보러가기!</em></a>
                </div>
             </div>
             </div>
@@ -252,5 +255,8 @@
   </div>
 </div>
 </div>
+
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+
 </body>
 </html>

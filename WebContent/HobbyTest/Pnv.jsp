@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/assets/css/Recommend.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body style="overflow-x:hidden">
 <div id="page-wrapper">
    <!-- Header -->
             <section id="header">
@@ -18,7 +18,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -134,7 +134,7 @@
                   사진은 기본적으로 실내에서 찍을수도 있지만 대부분 풍경사진을 찍기 위해 많은 이동을 하게 된다.<br>
                   그냥 걸었던 길을 카메라와 함께라면 같은 길이라도 집중하고 일상의 아름다움을 알게 될 수 있다. 더 많은 에너지를 소비하고 사진 찍는 즐거움을 얻고 싶다면 사진을 시작해보자
                </p>
-               <!--//연혁-->
+               <br>
                
                <div class="title_numbering">
                   <div class="numbering">#Photo & Video </div>
@@ -171,20 +171,20 @@
                      <li>
                         <!--<span class="list_thumb"><img src="/images/d1.jpg" alt=""></span>-->
                         <span class="list_number">01</span>
-                        <span class="list_cnt">나는 평소에<strong>관찰 </strong>하는 것을 좋아한다!</span>
+                        <span class="list_cnt"> &nbsp;나는 평소에<strong>관찰 </strong>하는 것을 좋아한다!</span>
                      </li>
                      <li>
                         <span class="list_number">02</span>
-                        <span class="list_cnt"> <strong>사진 </strong>찍는 것을 좋아한다!</span>
+                        <span class="list_cnt"> &nbsp; <strong> 사진 </strong>찍는 것을 좋아한다!</span>
                      </li>
                      <li>
                         
                         <span class="list_number">03</span>
-                        <span class="list_cnt"> <strong>누군가 </strong>를 찍어주는 것을 좋아한다!</span>
+                        <span class="list_cnt"> &nbsp; <strong> 누군가 </strong>를 찍어주는 것을 좋아한다!</span>
                      </li>
                      <li>
                         <span class="list_number">04</span>
-                        <span class="list_cnt"><strong>sns</strong>를 많이 한다! </span>
+                        <span class="list_cnt"> &nbsp; <strong> sns</strong>를 많이 한다! </span>
                      </li>
                     
                   </ul>
@@ -202,7 +202,7 @@
             <div class="detail-col-left">
                <div class="box-text static">
                   <p>
-                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> 다양한</span>
+                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> </span>
                      
                      <span class="web_view"><strong><em class="underline">PNV 클래스</em></strong>를 </span>
                      <span class="web_view"><strong><em class="sub_title">수강하세요</em></strong></span>
@@ -211,8 +211,10 @@
             </div>
             <div class="detail-col-right">
                <div class="text_detail box">
-                  추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
-                        <strong>회원가입</strong>을 하시면 다양한 소식을 받아볼 수 있어요. 여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!
+              추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
+                    <a href="../Join/insertForm.jsp"><strong>회원가입</strong></a>을 하시면 다양한 소식을 받아볼 수 있어요.<br>
+                                             여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!<br><br>
+                    <a href="../Hobby/PhotoNVideo.jsp"><em class="underline">다양한 <strong>PNV</strong> 클래스 보러가기!</em></a>
                </div>
             </div>
             </div>
@@ -221,5 +223,8 @@
   </div>
 </div>
 </div>
+
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+
 </body>
 </html>

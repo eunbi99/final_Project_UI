@@ -20,7 +20,7 @@
                   <!-- Nav 진짜마지막 -->
                      <nav id="nav">
                         <ul class="mainnav">
-                        	<li><a href="/index.jsp"><span>About Us</span></a></li>
+                        	<li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                          	<li>
                               <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
@@ -120,8 +120,11 @@
                    </div>
                  </div>
             </div>
+            
                           </div>
                            </section>
+             <a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+            
       <!-- Scripts -->
          <script src="../assets/js/jquery.min.js"></script>
          <script src="../assets/js/jquery.dropotron.min.js"></script>

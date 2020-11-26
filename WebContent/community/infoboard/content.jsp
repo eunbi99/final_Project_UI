@@ -66,10 +66,10 @@
                                 <ul class="navtop"> 
                         			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
-	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a href="/Join/Logout.jsp">Logout</a></li>
 	                                	
                                 	<%}else if(session.getAttribute("id")!=null){ %>      <!-- 아이디가 있으면 -->
-	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
+	                                	<li><a href="/Join/Logout.jsp">Logout</a></li>
 	                                	<li><a class="fas fa-user fa-1.5x" href="/MyPage/Profile.jsp"></a></li>
                                 	<%}else{%>       
                                 	<li><a href="/Join/LoginForm.jsp">Login</a></li>
@@ -136,30 +136,30 @@
   <tr height="30">      
   
     <td colspan="4" align="right" > 
-    <% if(session.getAttribute("id")!=null){%>
-    <%if(session.getAttribute("id").equals(article.getWriter())){%> 
+    <%if("admin".equals(session.getAttribute("id"))){ %>
    <input type="button" value="글수정" 
-       onclick="document.location.href='/community/infoboard/info_updateForm.jsp?num=<%=article.getNum()%>&pageNum=<%=pageNum%>'">
-
+       onclick="document.location.href='/ServiceCenter/Q&Aboard/qna_updateForm.jsp?num=<%=article.getNum()%>&pageNum=<%=pageNum%>'">
+      
     &nbsp;&nbsp;&nbsp;&nbsp;
    <input type="button" value="글삭제" 
-       onclick="document.location.href='/community/infoboard/info_deleteForm.jsp?num=<%=article.getNum()%>&pageNum=<%=pageNum%>'">
+       onclick="document.location.href='/ServiceCenter/Q&Aboard/qna_deleteForm.jsp?num=<%=article.getNum()%>&pageNum=<%=pageNum%>'">
      
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <%}%>
-    <input type="button" value="답글쓰기" 
-       onclick="document.location.href='/community/infoboard/info_writeForm.jsp?num=<%=num%>&ref=<%=ref%>&re_step=<%=re_step%>&re_level=<%=re_level%>'">
-       <%} %>
-    &nbsp;&nbsp;&nbsp;&nbsp;
+    <%} %>
        <input type="button" value="글목록" 
-       onclick="document.location.href='/community/infoboard/info_board.jsp?pageNum=<%=pageNum%>'">
- 
+       onclick="document.location.href='/ServiceCenter/Q&Aboard/Q&A.jsp?pageNum=<%=pageNum%>'">
+  <!--pagenum을  가지고 list.jsp로 넘어간다 -->
     </td>
   </tr>
 </table>    
 <%
  }catch(Exception e){} 
  %>
-</form>      
+</form>   
+</div>
+</div>
+</section> 
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+  
 </body>
 </html>

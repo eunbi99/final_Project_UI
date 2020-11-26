@@ -7,7 +7,7 @@
 	<meta charset="utf-8" />
   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	
-	<link rel="stylesheet" href="/assets/css/free_board.css">
+	<link rel="stylesheet" href="/assets/css/Board.css">
 </head>
 <body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -18,7 +18,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -145,5 +145,8 @@
 </div>
 </section>
 </div>
+
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+
 </body>
 </html>

@@ -147,12 +147,14 @@
 				<form method="post" action="/HobbyDetail/myClassPro.jsp" name="myClass">
 					<input type="submit" value="좋아요" id="submit" name="likeYnBtn" >
 					<input type="hidden" name="class_id" value="ART_03">
-					<input type="hidden" name="like_yn" id="like_yn" value="Y">
+					<input type="hidden" name="like_yn" value="Y">
 				</form>	
 				</article>
 			</div>
          	</div>
          </section>
+         
+         <a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
       <!-- Scripts -->
          <script src="../assets/js/jquery.min.js"></script>
          <script src="../assets/js/jquery.dropotron.min.js"></script>
@@ -165,18 +167,20 @@
   <script>
 	   $(document).ready(function(){
 			var entry_yn = '<%=entry_yn%>';
+
 			if( entry_yn =='Y'){
 				$('#divEntry').hide();
 				var text = $('input[name=entryBtn]').val();
 				$('input[name=entryBtn]').val('수강하기');
 				
 			}
+
 			var like_yn = '<%=like_yn%>';
 			if( like_yn =='Y'){
 				var text = $('input[name=likeYnBtn]').val();
 				$('input[name=likeYnBtn]').val('좋아요 취소');
-				$('#like_yn').val('N');
 			}
+
 	   });
 	   
 	   $('#playBtn').click( function() {

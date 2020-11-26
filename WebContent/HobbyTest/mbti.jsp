@@ -9,7 +9,7 @@
 <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 
 <link rel="stylesheet" href="../assets/css/mbti.css">
-<link rel="stylesheet" href="../assets/css/main.css">
+
 </head>
 
 <div class="homepage is-preload">
@@ -20,22 +20,20 @@
             <section id="header">
                <div class="container">
 
-                  <!-- Logo -->
-                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
-
-                  <!-- Nav -->
+                  
+                  <!-- Nav 최종 -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
-                              <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
+                              <a href="/HobbyTest/Survey.jsp"><span>Hobby</span></a>
                               <ul>
                                  <li><a href="/HobbyTest/Survey.jsp">취미 검사</a></li>
                                  <li><a href="/HobbyTest/mbti.jsp">MBTI 검사</a></li>
                               </ul>
                            </li>
-                       
-                           <li><a href="/ServiceCenter/FAQboard/FAQ.jsp">
+                           
+                           <li><a href="/ServiceCenter/Noticeboard/notice.jsp">
                            <span>Service Center</span></a>
                               <ul>
                                  <li><a href="/ServiceCenter/Noticeboard/notice.jsp">공지사항</a></li>
@@ -43,7 +41,7 @@
                                  <li><a href="/ServiceCenter/Q&Aboard/Q&A.jsp">Q&A</a></li>
                               </ul>
                            </li>
-                           <li><a href="/community/infoboard/info_board.jsp">
+                           <li><a href="/community/freeboard/free_board.jsp">
                               <span>community</span></a>
                               <ul>
                                  <li><a href="/community/freeboard/free_board.jsp">자유게시판</a></li>
@@ -51,8 +49,8 @@
                               </ul>
                            
                            </li>
-                        </ul>
-                        <ul class="navtop"> 
+                        </ul> 
+                                <ul class="navtop"> 
                         			<%if("admin".equals(session.getAttribute("id"))){ %> <!-- 관리자면 -->
 	                                	<li><a href="/admin/memberList.jsp">관리자메뉴</a></li>
 	                                	<li><a href="../Join/Logout.jsp">Logout</a></li>
@@ -67,10 +65,14 @@
                                             
                         </ul>
                      </nav>
-
+                     
+                     <!-- Logo -->
+                     <h1 id="logo"><a href="/index.jsp">MY HOB!</a></h1>
+                     
+                     
                </div>
             </section>
-				
+	
  		<div id="my-Sidebar">
         	<h2>취미탐색</h2>
         		<ul>
@@ -108,96 +110,24 @@
                         <h1 class="m_title"><span class="underline">MBTI</span></h1>
                       </a>
                     </div>
-                    <form action="" name="mbti">당신의 MBTI는?</p>
-                   		<input type="text" id="my_mbti" name="my_mbti" style=width:100%; placeholder="MBTI를 대문자로 입력해주세요.">
-                  		<input type="button" value="입력" onClick="mbtiCheck()"><br>
-                  		<span id='mbtiMsg' value='test용'/>
+                     
+                  	<form action="" class="search-wrapper cf" name="mbti">
+				        <input type="text" id="my_mbti" name="my_mbti" placeholder="MBTI 대문자로 입력" >
+				        <button type="button" value="입력" onClick="mbtiCheck()">Search</button>
+				        
+                  		<span id='mbtiMsg' value='test용'></span>
 
                    </form>
+			    	</form>	
+                  		
+					
+                 
                   </div>
                 </div>
               </div>
             </div>
           </li>
-          <li class="slider-item">
-            <div class="grid vertical">
-              <div class="column-xs-12 column-md-2 hide-mobile">
-                <div class="intro">
-                  <a href="#">
-                    <h1 class="m_title"><span class="underline">Explore Kyoto</span></h1>
-                  </a>
-                </div>
-              </div>
-              <div class="column-xs-12 column-md-10">
-                <div class="image-holder">
-                  <img src="https://source.unsplash.com/Pz3EHf-KJfc">
-                </div>
-                <div class="grid">
-                  <div class="column-xs-12 column-md-9">
-                    <div class="intro show-mobile">
-                      <a href="#">
-                        <h1 class="m_title"><span class="underline">Explore Kyoto</span></h1>
-                      </a>
-                    </div>
-                    <p class="description">Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="slider-item">
-            <div class="grid vertical">
-              <div class="column-xs-12 column-md-2 hide-mobile">
-                <div class="intro">
-                  <a href="#">
-                     <h1 class="m_title"><span class="underline">Explore Osaka</span></h1>
-                  </a>
-                </div>
-              </div>
-              <div class="column-xs-12 column-md-10">
-                <div class="image-holder">
-                  <img src="https://source.unsplash.com/peYW3VwICpE">
-                </div>
-                <div class="grid">
-                  <div class="column-xs-12 column-md-9">
-                    <div class="intro show-mobile">
-                      <a href="#">
-                        <h1 class="m_title"><span class="underline">Explore Osaka</span></h1>
-                      </a>
-                    </div>
-                    <p class="description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-            
-          <li class="slider-item">
-            <div class="grid vertical">
-              <div class="column-xs-12 column-md-2 hide-mobile">
-                <div class="intro">
-                  <a href="#">
-                    <h1 class="m_title"><span class="underline">Explore Hokkaido</span></h1>
-                  </a>
-                </div>
-              </div>
-              <div class="column-xs-12 column-md-10">
-                <div class="image-holder">
-                  <img src="https://source.unsplash.com/VmeOZQjTVGE">
-                </div>
-                <div class="grid">
-                  <div class="column-xs-12 column-md-9">
-                    <div class="intro show-mobile">
-                      <a href="#">
-                        <h1 class="m_title"><span class="underline">Explore Hokkaido</span></h1>
-                      </a>
-                    </div>
-                    <p class="description">Hokkaido, the northernmost of Japan’s main islands, is known for its volcanoes, natural hot springs ("onsen") and ski areas.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
+          
     
           </div>
       </div>
@@ -248,11 +178,11 @@ function mbtiCheck(){
 	}else
 		msg1="정확한 MBTI를 입력해주세요.";
 	
-	document.getElementById("mbtiMsg").innerHTML = "당신에게 " +msg+" 관련된 취미를 추천해드립니다.";
+	document.getElementById("mbtiMsg").innerHTML = msg+" 관련된 취미를 추천해드립니다.";
 	document.getElementById("mbtiMsg").innerHTML = msg1;
 }
 </script>
 </div>
-	
+
 </body>
 </html>

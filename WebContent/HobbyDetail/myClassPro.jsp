@@ -14,6 +14,7 @@
 	String class_id= request.getParameter("class_id");
 	String entry_yn= request.getParameter("entry_yn");
 	String like_yn= request.getParameter("like_yn");
+
 	if(id==null){
 		response.sendRedirect("/Join/LoginForm.jsp");
 	}else{
@@ -26,12 +27,15 @@
 			MyclassBean dbPro = MyclassBean.getInstance();
 		    dbPro.insertMyclass(myClass);
 		}
+
 		myClass.setReg_date(new Timestamp(System.currentTimeMillis()) );
 		myClass.setId(id);
 		myClass.setLike_yn(like_yn);
 		MyclassBean dbPro = MyclassBean.getInstance();
 	    dbPro.updateMyclass(myClass);
+
 		
 	    response.sendRedirect("/HobbyDetail/"+class_id+".jsp?classId="+class_id);
 	}
+
 %>

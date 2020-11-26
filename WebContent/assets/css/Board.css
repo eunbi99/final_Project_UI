@@ -140,7 +140,7 @@ table tbody td ul li {
 		letter-spacing: 2px;
 		padding: 0.5em 2em 0.5em 2em;
 } 
-
+/*
 #nav {
         display:block;
         justify-content: space-between;
@@ -297,7 +297,7 @@ table tbody td ul li {
     align-items: center;
 }
 
-       
+   */    
 /*�����̲�*/
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2213,8 +2213,10 @@ input, select, textarea {
 		font-size: 1.5em;
 		letter-spacing: 8px;
 	  	position: absolute;
-	  	margin: 0 0 0 5em;
+	  	margin: 0em 0 0 1em;
+	  	padding: 0em 0 0em 0;
 	  	cursor: default;
+	
        /* top: -500px;
         left:50px;
         width: 100%;
@@ -2253,6 +2255,8 @@ input, select, textarea {
 			letter-spacing: 3px;
 			text-align: center;
 		}*/
+
+
 
 /* Nav */
 
@@ -2561,11 +2565,7 @@ c_wrap {
 .slide:last-of-type {
   background-image: url("./images/image-3.jpg");
   @import url("fontawesome-all.min.css");
-/*
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 /* Header */
 

@@ -66,6 +66,8 @@ action="/ServiceCenter/Noticeboard/notice_updatePro.jsp?pageNum=<%=pageNum%>" on
 </form>
 <%
 }catch(Exception e){}%>      
+    
+    
       
 </body>
 </html>

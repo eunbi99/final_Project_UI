@@ -18,9 +18,7 @@
 	
 
 	</head>
-	<body class="homepage is-preload" style="overflow-x:hidden">
-		<div id="page-wrapper">
-<!-- Header -->
+	<!-- Header -->
             <section id="header">
                <div class="container">
 
@@ -28,7 +26,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -205,14 +203,14 @@
 								                </td>
 								            </tr>
 								                   
-								               <tr>
-			                                        <td align="center"><b>관심분야</b>
-			                                        <td colspan = "7" >
-				                                       <input type="checkbox" id="ch1" name="hobby" value="예술" checked>예술
-				                                       <input type="checkbox" id="ch2" name="hobby" value="음악">음악
-				                                       <input type="checkbox" id="ch3" name="hobby" value="스포츠">스포츠
-                                       				 </td>
-                                    		 </tr>
+								            <tr>
+                                        		<td align="center"><b>관심분야</b>
+                                       			<td colspan = "7" >
+                                            	<input type="checkbox" id="ch1" name="hobby" value="예술" checked>예술
+                                       			<input type="checkbox" id="ch2" name="hobby" value="음악">음악
+                                       			<input type="checkbox" id="ch3" name="hobby" value="스포츠">스포츠
+                                        		</td>
+                                    	</tr>
         					</table>
         					</form>
         								<input type="submit" id="delete" value="회원탈퇴" 

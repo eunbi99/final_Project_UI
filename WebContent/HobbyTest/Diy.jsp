@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/assets/css/Recommend.css">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body style="overflow-x:hidden">
 <div id="page-wrapper">
    <!-- Header -->
             <section id="header">
@@ -18,7 +18,7 @@
                   <!-- Nav -->
                      <nav id="nav">
                         <ul>
-                           <li><a href="/index.jsp"><span>About Us</span></a></li>
+                           <li><a href="/AboutUs/AboutUs.jsp"><span>About Us</span></a></li>
                            <li>
                               <a href="/HobbyTest/mbti.jsp"><span>Hobby</span></a>
                               <ul>
@@ -133,7 +133,7 @@
                         <br>다양한 스티커와 메모지, 마스킹테이프, 스탬프등 여러가지 다꾸템을 구경하며 구매하는 재미 또한 느낄 수 있다.
                         여행 다이어리, 영화 후기, 아이돌 덕질 등 본인의 휘향에 따라 더욱 다채롭게 즐길 수있다.
                </p>
-               <!--//연혁-->
+               <br>
                
                <div class="title_numbering">
                   <div class="numbering">#DIY </div>
@@ -149,9 +149,8 @@
                             사람들은 집에서 휴식을 취하고 에너지를 얻는다. 집은 ‘나’를 표현하는 수단이 되기도 한다. 사람들이 시간과 정성을 들여 셀프 인테리어를 하는 이유다.<br><br>
                             자신의 라이프 스타일에 맞는 차별화된 공간을 만들 수 있고, 감성적으로는 나만의 공간을 내 손으로 꾸민다는 보람을 느낄 수 있다.
 
-
-
                </p>
+               <br>
                     
                     <div class="title_numbering">
                   <div class="numbering">#DIY 패션 </div>
@@ -164,6 +163,8 @@
                   </div>
                   <p class="text_detail">
                   재봉틀을 이용한 미싱이나 바느질, 뜨게질 부터 간단한 리폼까지 개성있는 옷을 만들어 입을 수 있다. 또한 한땀 한땀 직접 만든 것을 선물하기에도 좋은 취미이다. 
+                </p>
+                <br>
                     
                      <div class="title_numbering">
                   <div class="numbering">#DIY  </div>
@@ -214,7 +215,7 @@
                      </li>
                      <li>
                         <span class="list_number">05</span>
-                        <span class="list_cnt"><strong>또 뭐가 있을까 </strong>???</span>
+                        <span class="list_cnt"><strong>도전</strong>하는 것을 좋아한다!</span>
                      </li>
                   </ul>
                </div>
@@ -231,7 +232,7 @@
             <div class="detail-col-left">
                <div class="box-text static">
                   <p>
-                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"> 다양한</span>
+                     <strong>&lsquo;MY HOB!&rsquo;  </strong>에서 <span class="web_view"></span>
                      
                      <span class="web_view"><strong><em class="underline">DIY 클래스</em></strong>를 </span>
                      <span class="web_view"><strong><em class="sub_title">수강하세요</em></strong></span>
@@ -240,8 +241,10 @@
             </div>
             <div class="detail-col-right">
                <div class="text_detail box">
-                  추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
-                        <strong>회원가입</strong>을 하시면 다양한 소식을 받아볼 수 있어요. 여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!
+                  	추천해드린 취미가 마음에 드신다면 <strong>‘MY HOB!’사이트</strong>에서, 새롭게 취미를 만들어 보세요. <br>
+                    <a href="../Join/insertForm.jsp"><strong>회원가입</strong></a>을 하시면 다양한 소식을 받아볼 수 있어요.<br>
+                                             여러분들에게 딱 맞는 취미를 찾으시길 바랍니다!<br><br>
+                    <a href="../Hobby/DIY.jsp"><em class="underline">다양한 <strong>DIY</strong> 클래스 보러가기!</em></a>
                </div>
             </div>
             </div>
@@ -250,5 +253,8 @@
   </div>
 </div>
 </div>
+
+<a style="display:scroll;position:fixed;bottom:10px;right:10px;" href="#" title=”맨위로"><img src="/images/up-arrow.png"></a>
+
 </body>
 </html>
